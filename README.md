@@ -16,8 +16,10 @@ Puis ouvrir http://localhost:8080 dans un navigateur.
 
 ## Ce que contient la page
 
-- Héro avec un graphique 3D de pilotage (réalisé jusqu'à aujourd'hui, prévisionnel en rouge) qui réagit à la souris et au défilement
+- Héro avec une photo de Toulouse au crépuscule sous filtre marine, et un graphique 3D de pilotage (réalisé jusqu'à aujourd'hui, prévisionnel en rouge) qui réagit à la souris et au défilement
+- Bandeau interactif « besoin du moment → expertise » : sept besoins de dirigeant, sept métiers, avec accès direct à la carte du métier
 - Présentation du cabinet, compteurs et manifeste révélé au défilement
+- « Une journée de dirigeant » : six moments de la journée en cartes 3D qui défilent en profondeur au scroll, avec horloge et course du soleil
 - Les sept métiers en défilement horizontal épinglé
 - Cinq situations d'entrepreneur en cartes empilées
 - Grille des plus-values et « bilan » Actif / Passif du partenariat
@@ -27,3 +29,7 @@ Puis ouvrir http://localhost:8080 dans un navigateur.
 ## Technique
 
 HTML, CSS et JavaScript sans build. Bibliothèques chargées depuis des CDN : Three.js 0.152, GSAP 3.12 avec ScrollTrigger, Lenis 1.1. Polices Google Fonts : Archivo, Instrument Serif, Michroma.
+
+## Crédit photo
+
+Photo du héro : Arthur Chauvineau, Le Bazacle, Toulouse (licence Unsplash), chargée depuis le CDN d'Unsplash : https://unsplash.com/fr/photos/Tdz7oDwnHbE
