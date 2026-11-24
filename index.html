@@ -1,0 +1,1621 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SG Conseils</title>
+<meta name="description" content="SG Conseils, cabinet d'expertise comptable à Toulouse et Villefranche-de-Lauragais : comptabilité, audit, juridique, conseil, gestion, social et informatique. Le partenaire des entrepreneurs depuis 2015.">
+<meta name="theme-color" content="#1C212F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23ffffff'/%3E%3Ctext x='4' y='46' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='40' fill='%23B12434'%3ES%3C/text%3E%3Ctext x='30' y='46' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='40' fill='%23858384'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=Michroma&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SG CONSEILS — direction artistique
+   Concept : « le bilan vivant ». Une page qui se lit comme un rapport
+   annuel premium mis en mouvement : grands repères typographiques,
+   grilles réglées, un seul accent (le rouge du logo), relief 3D.
+   Charte conservée : rouge #B12434, gris #858384, marine #1C212F,
+   ardoise #425B8A / #7D93B5 / #BEC8DA (site actuel).
+   ============================================================ */
+:root{
+  --ink:#0B0E14;
+  --navy:#1C212F;
+  --navy-2:#232A3A;
+  --navy-3:#2C3447;
+  --slate:#425B8A;
+  --slate-l:#7D93B5;
+  --mist:#BEC8DA;
+  --red:#B12434;
+  --red-l:#D42B3F;
+  --coral:#D47472;
+  --grey:#858384;
+  --grey-l:#B5B3B4;
+  --paper:#EEF0F4;
+  --paper-2:#E2E6ED;
+  --white:#FFFFFF;
+  --fg:#EDEFF3;
+  --fg-dim:rgba(237,239,243,.62);
+  --fg-dark:#141821;
+  --fg-dark-dim:rgba(20,24,33,.64);
+  --line:rgba(237,239,243,.1);
+  --line-dark:rgba(20,24,33,.12);
+
+  --f-display:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-body:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-serif:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --f-logo:'Michroma','Eurostile','Arial Black',sans-serif;
+
+  --gutter:max(16px,env(safe-area-inset-left,0px));
+  --gutter-r:max(16px,env(safe-area-inset-right,0px));
+  --container:1320px;
+  --nav-h:76px;
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-in-out:cubic-bezier(.65,0,.35,1);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+body{
+  margin:0;background:var(--navy);color:var(--fg);
+  font-family:var(--f-body);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
+img,svg,canvas{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0}
+h1,h2,h3,h4{margin:0;font-family:var(--f-display);font-weight:700;letter-spacing:-.03em;line-height:1;text-wrap:balance}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--red-l);outline-offset:4px;border-radius:2px}
+::selection{background:var(--red);color:#fff}
+
+.wrap{width:100%;max-width:var(--container);margin-inline:auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+.wrap--wide{max-width:1560px}
+.s-dark{background:var(--navy);color:var(--fg)}
+.s-ink{background:var(--ink);color:var(--fg)}
+.s-light{background:var(--paper);color:var(--fg-dark)}
+.s-light .label{color:var(--red)}
+.s-light .dim{color:var(--fg-dark-dim)}
+.dim{color:var(--fg-dim)}
+
+.label{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--f-display);font-weight:600;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mist)
+}
+.label::before{content:"";width:28px;height:2px;background:var(--red);flex:none}
+.label--plain::before{display:none}
+.serif{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.01em;font-size:1.06em}
+.serif--red{color:var(--red-l)}
+.s-light .serif--red{color:var(--red)}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- Boutons ---------- */
+.btn{
+  position:relative;display:inline-flex;align-items:center;gap:14px;
+  padding:18px 28px;border-radius:999px;font-family:var(--f-display);font-weight:600;font-size:15px;letter-spacing:.01em;
+  background:var(--red);color:#fff;overflow:hidden;isolation:isolate;transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out);
+  white-space:nowrap;
+}
+.btn::before{content:"";position:absolute;inset:0;background:var(--red-l);transform:translateY(101%);transition:transform .5s var(--ease-out);z-index:-1;border-radius:inherit}
+.btn:hover::before{transform:translateY(0)}
+.btn:hover{box-shadow:0 18px 40px -14px rgba(177,36,52,.7)}
+.btn .arr{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;flex:none;transition:transform .5s var(--ease-out),background .4s}
+.btn:hover .arr{transform:translateX(4px);background:#fff}
+.btn .arr svg{width:14px;height:14px;transition:stroke .4s}
+.btn:hover .arr svg{stroke:var(--red)}
+.btn--ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1.5px rgba(237,239,243,.28)}
+.btn--ghost::before{background:var(--fg)}
+.btn--ghost:hover{color:var(--navy);box-shadow:none}
+.btn--ghost .arr{background:rgba(237,239,243,.1)}
+.btn--ghost:hover .arr{background:var(--navy)}
+.btn--ghost:hover .arr svg{stroke:#fff}
+.s-light .btn--ghost{color:var(--fg-dark);box-shadow:inset 0 0 0 1.5px rgba(20,24,33,.25)}
+.s-light .btn--ghost::before{background:var(--fg-dark)}
+.s-light .btn--ghost:hover{color:#fff}
+.link{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;position:relative}
+.link::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:1.5px;background:currentColor;transform:scaleX(.35);transform-origin:left;transition:transform .5s var(--ease-out)}
+.link:hover::after{transform:scaleX(1)}
+
+/* ---------- Préchargeur ---------- */
+#loader{position:fixed;inset:0;z-index:1000;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:28px;color:var(--fg)}
+#loader .ld-logo{width:96px;opacity:.95}
+#loader .ld-count{font-family:var(--f-display);font-weight:200;font-size:clamp(64px,10vw,120px);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+#loader .ld-count sup{font-size:.28em;font-weight:500;vertical-align:top;margin-left:.08em;color:var(--mist)}
+#loader .ld-bar{width:min(320px,60vw);height:1px;background:rgba(237,239,243,.15);position:relative;overflow:hidden}
+#loader .ld-bar i{position:absolute;inset:0;background:var(--red);transform:scaleX(0);transform-origin:left}
+#loader .ld-tag{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--fg-dim)}
+body.no-motion #loader{display:none}
+
+/* ---------- Curseur & progression ---------- */
+#cursor{position:fixed;left:0;top:0;z-index:999;pointer-events:none;mix-blend-mode:difference;display:none}
+body.has-cursor #cursor{display:block}
+#cursor .c-dot{position:absolute;left:-3px;top:-3px;width:6px;height:6px;border-radius:50%;background:#fff}
+#cursor .c-ring{position:absolute;left:-22px;top:-22px;width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.85);transition:transform .45s var(--ease-out),opacity .3s,background .3s;display:grid;place-items:center}
+#cursor .c-ring span{font-family:var(--f-display);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:0;transition:opacity .3s;color:#000;white-space:nowrap}
+#cursor.is-link .c-ring{transform:scale(1.6);background:rgba(255,255,255,.1)}
+#cursor.is-label .c-ring{transform:scale(2.7);background:#fff;border-color:#fff}
+#cursor.is-label .c-ring span{opacity:1}
+#cursor.is-label .c-dot{opacity:0}
+#progress{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--red);transform-origin:left;transform:scaleX(0);z-index:900;pointer-events:none}
+
+/* ---------- Navigation ---------- */
+#nav{
+  position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:800;height:var(--nav-h);
+  display:flex;align-items:center;transition:transform .6s var(--ease-out),background .5s,backdrop-filter .5s,height .5s var(--ease-out);
+  padding-left:var(--gutter);padding-right:var(--gutter-r);
+}
+#nav.hidden{transform:translateY(-110%)}
+#nav.scrolled{background:rgba(28,33,47,.72);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);height:64px;box-shadow:0 1px 0 rgba(237,239,243,.08)}
+#nav .nav-in{width:100%;max-width:1560px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:14px}
+.logo svg{height:44px;width:auto;transition:height .5s var(--ease-out)}
+#nav.scrolled .logo svg{height:38px}
+.logo .logo-plate{background:#fff;border-radius:8px;padding:5px 7px 3px;box-shadow:0 2px 0 rgba(0,0,0,.2)}
+.logo-txt{display:flex;flex-direction:column;line-height:1.05}
+.logo-txt b{font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:-.01em}
+.logo-txt small{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-dim)}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{position:relative;padding:10px 14px;font-family:var(--f-display);font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--fg);opacity:.82;transition:opacity .3s}
+.nav-links a::after{content:"";position:absolute;left:14px;right:14px;bottom:5px;height:1.5px;background:var(--red-l);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease-out)}
+.nav-links a:hover{opacity:1}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.nav-cta .btn{padding:13px 20px;font-size:13.5px}
+.nav-cta .btn .arr{width:26px;height:26px}
+.burger{width:46px;height:46px;border-radius:50%;display:none;place-items:center;box-shadow:inset 0 0 0 1.5px rgba(237,239,243,.25);position:relative;z-index:2}
+.burger i{position:absolute;left:14px;right:14px;height:1.6px;background:#fff;transition:transform .5s var(--ease-out),top .5s var(--ease-out),opacity .3s}
+.burger i:nth-child(1){top:18px}.burger i:nth-child(2){top:23px}.burger i:nth-child(3){top:28px}
+body.menu-open .burger i:nth-child(1){top:23px;transform:rotate(45deg)}
+body.menu-open .burger i:nth-child(2){opacity:0}
+body.menu-open .burger i:nth-child(3){top:23px;transform:rotate(-45deg)}
+#menu{position:fixed;inset:0;z-index:790;background:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--nav-h) + 24px) var(--gutter-r) 40px var(--gutter);clip-path:inset(0 0 100% 0);transition:clip-path .8s var(--ease-in-out);overflow:auto}
+body.menu-open #menu{clip-path:inset(0 0 0 0)}
+#menu a.m-link{display:block;font-family:var(--f-display);font-weight:700;font-size:clamp(40px,10vw,72px);letter-spacing:-.04em;line-height:1.05;padding:8px 0;border-bottom:1px solid var(--line);opacity:0;transform:translateY(30px);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
+#menu a.m-link span{font-family:var(--f-display);font-weight:500;font-size:13px;letter-spacing:.2em;color:var(--red-l);margin-right:16px;vertical-align:middle;display:inline-block;transform:translateY(-12px)}
+body.menu-open #menu a.m-link{opacity:1;transform:none}
+#menu .m-foot{margin-top:40px;display:flex;flex-wrap:wrap;gap:24px 48px;color:var(--fg-dim);font-size:14px}
+#menu .m-foot b{display:block;color:var(--fg);font-weight:600;margin-bottom:4px}
+
+/* ---------- Héro ---------- */
+#hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--navy);isolation:isolate}
+#hero-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:0;transition:opacity 1.6s ease}
+#hero.is-ready #hero-canvas{opacity:1}
+body.no-motion #hero-canvas{opacity:1}
+#hero .hero-grad{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(60% 70% at 18% 40%,rgba(28,33,47,.92) 0%,rgba(28,33,47,.55) 45%,rgba(28,33,47,0) 100%),
+    linear-gradient(180deg,rgba(28,33,47,.75) 0%,rgba(28,33,47,0) 28%,rgba(28,33,47,0) 60%,rgba(28,33,47,.98) 100%)}
+#hero .hero-grid{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.35;
+  background-image:linear-gradient(rgba(190,200,218,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(190,200,218,.08) 1px,transparent 1px);
+  background-size:120px 120px;mask-image:radial-gradient(70% 60% at 50% 40%,#000 30%,transparent 100%);-webkit-mask-image:radial-gradient(70% 60% at 50% 40%,#000 30%,transparent 100%)}
+#hero .hero-in{position:relative;z-index:2;width:100%;padding-top:calc(var(--nav-h) + 44px);padding-bottom:40px}
+.hero-top{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:40px;align-items:end}
+.hero-spacer{min-height:1px}
+.hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:34px}
+.hero-eyebrow .pulse{width:10px;height:10px;border-radius:50%;background:var(--red-l);position:relative}
+.hero-eyebrow .pulse::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--red-l);animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.6);opacity:0}}
+h1.hero-title{font-size:clamp(44px,6.5vw,102px);font-weight:700;font-stretch:108%;letter-spacing:-.045em;line-height:.93;max-width:12ch}
+h1.hero-title .serif{font-size:1.02em;font-stretch:100%;color:var(--mist)}
+h1.hero-title .serif--red{color:var(--red-l)}
+.hero-side{display:flex;flex-direction:column;gap:26px;margin-top:36px;max-width:54ch}
+.hero-side p{font-size:clamp(16px,1.25vw,19px);line-height:1.6;color:var(--fg-dim);max-width:44ch}
+.hero-side p strong{color:var(--fg);font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-bottom{margin-top:clamp(36px,6vh,72px);border-top:1px solid var(--line);padding-top:26px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.fact{display:flex;flex-direction:column;gap:6px}
+.fact b{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,2.6vw,38px);letter-spacing:-.04em;line-height:1;font-stretch:105%}
+.fact b sup{font-size:.45em;color:var(--red-l);vertical-align:top;font-weight:600;margin-left:2px}
+.fact span{font-size:13px;color:var(--fg-dim);letter-spacing:.02em}
+.scroll-cue{position:absolute;right:var(--gutter-r);bottom:40px;z-index:3;display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--fg-dim)}
+.scroll-cue i{width:1px;height:54px;background:linear-gradient(var(--red-l),transparent);position:relative;overflow:hidden}
+.scroll-cue i::after{content:"";position:absolute;left:0;top:-100%;width:100%;height:100%;background:#fff;animation:cue 2s var(--ease-in-out) infinite}
+@keyframes cue{0%{top:-100%}60%,100%{top:100%}}
+.hero-mark{position:absolute;right:-2vw;top:14vh;z-index:1;font-family:var(--f-logo);font-size:clamp(220px,34vw,560px);line-height:1;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px rgba(190,200,218,.08);pointer-events:none;user-select:none}
+
+/* ---------- Héro : repères du graphique ---------- */
+.h3d-ui{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.h3d-label{position:absolute;left:0;top:0;will-change:transform;transition:opacity .4s;white-space:nowrap;font-family:var(--f-display)}
+.h3d-year{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(190,200,218,.7);font-weight:600;margin-left:-20px;margin-top:10px}
+.h3d-year::before{content:"";position:absolute;left:50%;top:-10px;width:1px;height:8px;background:rgba(190,200,218,.5)}
+.h3d-year--today{color:#fff;margin-top:14px}
+.h3d-year--today::before{background:var(--red-l);height:12px;top:-14px}
+.h3d-year--future{color:var(--red-l)}
+.h3d-chip{margin-left:-6px;margin-top:-54px;font-size:11.5px;font-weight:600;letter-spacing:.06em;color:#fff;padding:8px 12px 8px 10px;border-radius:999px;background:rgba(28,33,47,.72);border:1px solid rgba(190,200,218,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:inline-flex;align-items:center;gap:8px;box-shadow:0 10px 30px -14px rgba(0,0,0,.8)}
+.h3d-chip i{width:7px;height:7px;border-radius:50%;background:var(--mist);flex:none}
+.h3d-chip::after{content:"";position:absolute;left:6px;top:100%;width:1px;height:22px;background:linear-gradient(rgba(190,200,218,.7),transparent)}
+.h3d-chip--future{border-color:rgba(212,43,63,.6);color:#fff}
+.h3d-chip--future i{background:var(--red-l);box-shadow:0 0 10px var(--red-l)}
+.h3d-legend{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:11.5px;letter-spacing:.04em;color:var(--fg-dim);padding-top:4px}
+.h3d-legend .h3d-legend-title{width:100%;font-family:var(--f-display);font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mist)}
+.h3d-legend span{display:inline-flex;align-items:center;gap:8px}
+.h3d-legend .sw{width:10px;height:10px;border-radius:2px;flex:none}
+.h3d-legend .sw-past{background:linear-gradient(135deg,var(--slate),var(--mist))}
+.h3d-legend .sw-fut{background:rgba(212,43,63,.35);box-shadow:inset 0 0 0 1px var(--red-l)}
+.h3d-legend .sw-line{height:0;border-top:2px dashed #fff;border-radius:0;width:16px}
+.h3d-tip{position:absolute;left:0;top:0;opacity:0;transition:opacity .25s;will-change:transform;display:flex;flex-direction:column;gap:2px;padding:9px 13px;border-radius:12px;background:#fff;color:var(--navy);box-shadow:0 18px 40px -16px rgba(0,0,0,.8);pointer-events:none;white-space:nowrap}
+.h3d-tip b{font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:-.01em}
+.h3d-tip span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--slate)}
+.h3d-tip.is-future span{color:var(--red)}
+.h3d-tip::before{content:"";position:absolute;left:-7px;bottom:10px;width:12px;height:12px;background:#fff;transform:rotate(45deg);border-radius:2px}
+@media (max-width:900px){.h3d-chip,.h3d-tip{display:none}.h3d-year{font-size:10px}}
+@media (max-width:560px){.h3d-year{display:none}}
+
+/* ---------- Bandeau défilant ---------- */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink);overflow:hidden;padding:22px 0;position:relative;z-index:2}
+.marquee .mq-track{display:flex;gap:0;width:max-content;animation:mq 38s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.marquee .mq-item{display:flex;align-items:center;gap:36px;padding-right:36px;font-family:var(--f-display);font-weight:600;font-stretch:110%;font-size:clamp(18px,2vw,26px);letter-spacing:-.01em;text-transform:uppercase;white-space:nowrap;color:var(--fg)}
+.marquee .mq-item i{width:10px;height:10px;background:var(--red);transform:rotate(45deg);flex:none}
+.marquee .mq-item em{font-family:var(--f-serif);font-style:italic;text-transform:none;font-weight:400;color:var(--mist);font-size:1.15em;letter-spacing:0}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- Sections : structure commune ---------- */
+section.block{position:relative;padding-block:clamp(90px,12vw,170px)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:clamp(44px,6vw,84px)}
+.sec-head h2{font-size:clamp(36px,5vw,76px);font-stretch:104%;letter-spacing:-.04em;line-height:.98}
+.sec-head .lead{font-size:clamp(16px,1.2vw,19px);line-height:1.65;max-width:50ch;color:var(--fg-dim)}
+.s-light .sec-head .lead{color:var(--fg-dark-dim)}
+.sec-head .label{margin-bottom:22px}
+
+/* ---------- Le cabinet (manifeste) ---------- */
+#cabinet{overflow:hidden}
+#cabinet .cab-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px,6vw,110px);align-items:start}
+.manifesto{font-family:var(--f-display);font-weight:600;font-stretch:102%;font-size:clamp(28px,3.6vw,54px);letter-spacing:-.035em;line-height:1.08;text-wrap:pretty}
+.manifesto .w .wi{opacity:.16;transition:none}
+body.no-motion .manifesto .w .wi{opacity:1}
+.manifesto .serif{color:var(--red)}
+.cab-side{display:flex;flex-direction:column;gap:28px;padding-top:12px}
+.cab-side p{font-size:17px;line-height:1.7;color:var(--fg-dark-dim)}
+.cab-side p strong{color:var(--fg-dark);font-weight:600}
+.cab-side .quote{position:relative;padding:28px 30px;background:#fff;border-left:3px solid var(--red);font-family:var(--f-serif);font-style:italic;font-size:26px;line-height:1.25;color:var(--fg-dark);box-shadow:0 30px 60px -40px rgba(20,24,33,.35)}
+.cab-side .quote small{display:block;margin-top:14px;font-family:var(--f-display);font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+.counters{margin-top:clamp(60px,8vw,110px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line-dark)}
+.counter{padding:34px 28px 34px 0;border-right:1px solid var(--line-dark);display:flex;flex-direction:column;gap:10px}
+.counter:not(:first-child){padding-left:28px}
+.counter:last-child{border-right:0}
+.counter b{font-family:var(--f-display);font-weight:700;font-stretch:112%;font-size:clamp(44px,5.4vw,84px);letter-spacing:-.05em;line-height:.9;color:var(--fg-dark);display:flex;align-items:baseline;gap:4px}
+.counter b em{font-style:normal;font-size:.42em;color:var(--red);font-weight:600;letter-spacing:-.02em}
+.counter > span{font-size:14px;color:var(--fg-dark-dim);line-height:1.45;max-width:22ch}
+.counter b span{font-size:inherit;color:inherit}
+.cab-bg{position:absolute;left:-4vw;bottom:-6vw;font-family:var(--f-display);font-weight:800;font-stretch:120%;font-size:clamp(160px,26vw,420px);letter-spacing:-.06em;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(20,24,33,.08);pointer-events:none;user-select:none;white-space:nowrap}
+
+/* ---------- Métiers : défilement horizontal épinglé ---------- */
+#metiers{padding:0;overflow:hidden}
+#metiers .pin{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(70px,9vh,110px) 40px}
+#metiers .m-head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:clamp(28px,4vh,56px)}
+#metiers .m-head h2{font-size:clamp(34px,4.6vw,72px);font-stretch:104%;letter-spacing:-.04em;line-height:.96}
+#metiers .m-head .m-count{display:flex;align-items:center;gap:18px;font-family:var(--f-display);font-weight:600;font-size:14px;letter-spacing:.1em;color:var(--fg-dim)}
+#metiers .m-head .m-count b{font-size:38px;font-weight:300;letter-spacing:-.04em;color:var(--fg);font-variant-numeric:tabular-nums}
+#metiers .m-progress{height:1px;background:var(--line);position:relative;flex:1;max-width:220px}
+#metiers .m-progress i{position:absolute;inset:0;background:var(--red-l);transform-origin:left;transform:scaleX(0)}
+.m-track{display:flex;gap:clamp(16px,1.6vw,26px);padding-left:var(--gutter);padding-right:var(--gutter-r);will-change:transform;width:max-content}
+.m-track::after{content:"";flex:none;width:8vw}
+.mcard{
+  position:relative;flex:none;width:clamp(330px,33vw,520px);min-height:clamp(480px,66vh,620px);
+  padding:34px 34px 30px;border-radius:22px;background:linear-gradient(160deg,var(--navy-2),var(--navy));
+  border:1px solid rgba(237,239,243,.09);display:flex;flex-direction:column;overflow:hidden;
+  transform-style:preserve-3d;transform:perspective(1100px);box-shadow:0 40px 80px -50px rgba(0,0,0,.7);
+  transition:border-color .5s,box-shadow .5s;
+}
+.mcard:hover{border-color:rgba(212,43,63,.45);box-shadow:0 60px 100px -50px rgba(177,36,52,.45)}
+.mcard::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .5s;
+  background:radial-gradient(420px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.12),transparent 60%)}
+.mcard:hover::after{opacity:1}
+.mcard .m-ghost{position:absolute;right:-10px;bottom:-26px;font-family:var(--f-display);font-weight:800;font-stretch:118%;font-size:220px;letter-spacing:-.07em;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(190,200,218,.14);pointer-events:none;transform:translateZ(10px);transition:-webkit-text-stroke-color .5s,transform .7s var(--ease-out)}
+.mcard:hover .m-ghost{-webkit-text-stroke-color:rgba(212,43,63,.45);transform:translateZ(30px) translateY(-8px)}
+.mcard .m-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:auto;transform:translateZ(24px)}
+.mcard .m-idx{font-family:var(--f-display);font-weight:600;font-size:13px;letter-spacing:.2em;color:var(--red-l)}
+.mcard .m-tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-dim);padding:7px 12px;border:1px solid var(--line);border-radius:999px}
+.mcard .m-icon{width:62px;height:62px;border-radius:16px;background:rgba(237,239,243,.06);border:1px solid var(--line);display:grid;place-items:center;margin:34px 0 26px;transform:translateZ(30px);transition:background .5s,transform .7s var(--ease-out)}
+.mcard:hover .m-icon{background:var(--red);transform:translateZ(46px) rotate(-6deg)}
+.mcard .m-icon svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.mcard h3{font-size:clamp(30px,2.6vw,40px);font-stretch:106%;letter-spacing:-.04em;line-height:.98;transform:translateZ(34px)}
+.mcard .m-catch{margin-top:12px;font-family:var(--f-serif);font-style:italic;font-size:22px;color:var(--mist);line-height:1.2;transform:translateZ(28px)}
+.mcard p.m-desc{margin-top:18px;font-size:15px;line-height:1.6;color:var(--fg-dim);transform:translateZ(20px)}
+.mcard ul{margin-top:20px;display:flex;flex-direction:column;gap:9px;transform:translateZ(22px)}
+.mcard ul li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--fg);line-height:1.45}
+.mcard ul li::before{content:"";width:6px;height:6px;background:var(--red-l);transform:rotate(45deg) translateY(6px);flex:none;margin-top:2px}
+.mcard .m-foot{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;transform:translateZ(26px)}
+.mcard .m-foot .link{font-size:12.5px}
+.mcard .m-line{position:absolute;left:0;top:0;height:3px;width:100%;background:var(--red-l);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease-out)}
+.mcard:hover .m-line{transform:scaleX(1)}
+
+/* ---------- Accompagnement : cartes empilées ---------- */
+#parcours .stack{position:relative;display:flex;flex-direction:column;gap:22px;margin-top:10px}
+.jcard{
+  position:sticky;top:calc(var(--nav-h) + 20px);
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4vw,70px);
+  padding:clamp(28px,3.4vw,54px);border-radius:24px;background:#fff;color:var(--fg-dark);
+  box-shadow:0 30px 80px -40px rgba(20,24,33,.35),0 0 0 1px rgba(20,24,33,.06);transform-origin:top center;overflow:hidden;will-change:transform
+}
+.jcard:nth-child(2){top:calc(var(--nav-h) + 36px)}
+.jcard:nth-child(3){top:calc(var(--nav-h) + 52px)}
+.jcard:nth-child(4){top:calc(var(--nav-h) + 68px)}
+.jcard:nth-child(5){top:calc(var(--nav-h) + 84px)}
+.jcard .j-left{display:flex;flex-direction:column;gap:18px;min-width:0}
+.jcard .j-step{display:flex;align-items:center;gap:14px;font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.jcard .j-step i{width:40px;height:1.5px;background:var(--red)}
+.jcard h3{font-size:clamp(28px,3.2vw,50px);font-stretch:104%;letter-spacing:-.04em;line-height:1}
+.jcard .j-you{font-family:var(--f-serif);font-style:italic;font-size:21px;line-height:1.3;color:var(--fg-dark-dim);max-width:34ch}
+.jcard .j-right{display:flex;flex-direction:column;gap:22px;min-width:0;border-left:1px solid var(--line-dark);padding-left:clamp(24px,3vw,56px)}
+.jcard .j-right h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);font-weight:600;letter-spacing:.2em}
+.jcard .j-right ul{display:grid;gap:12px}
+.jcard .j-right li{display:flex;gap:14px;align-items:flex-start;font-size:16px;line-height:1.5;color:var(--fg-dark)}
+.jcard .j-right li b{flex:none;width:26px;height:26px;border-radius:50%;background:var(--paper);display:grid;place-items:center;margin-top:1px}
+.jcard .j-right li b svg{width:13px;height:13px;stroke:var(--red);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.jcard .j-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.jcard .j-tags span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;border-radius:999px;background:var(--navy);color:#fff;font-weight:600}
+.jcard .j-tags span.alt{background:transparent;color:var(--fg-dark);box-shadow:inset 0 0 0 1px rgba(20,24,33,.18);font-weight:500}
+.jcard .j-num{position:absolute;right:-8px;bottom:-30px;font-family:var(--f-display);font-weight:800;font-stretch:120%;font-size:200px;line-height:1;letter-spacing:-.07em;color:transparent;-webkit-text-stroke:1px rgba(20,24,33,.08);pointer-events:none}
+#parcours .stack-end{height:12vh}
+
+/* ---------- Pourquoi nous : bento ---------- */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:minmax(220px,auto);gap:16px}
+.tile{
+  position:relative;padding:30px;border-radius:22px;background:var(--navy-2);border:1px solid rgba(237,239,243,.08);overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;gap:12px;isolation:isolate;transition:transform .6s var(--ease-out),border-color .5s;transform-style:preserve-3d
+}
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .6s;background:radial-gradient(520px circle at var(--gx,50%) var(--gy,50%),rgba(212,43,63,.22),transparent 60%)}
+.tile:hover::before{opacity:1}
+.tile:hover{border-color:rgba(212,43,63,.4)}
+.tile h3{font-size:clamp(22px,1.8vw,30px);font-stretch:104%;letter-spacing:-.035em;line-height:1.04;max-width:16ch}
+.tile p{font-size:15px;line-height:1.55;color:var(--fg-dim);max-width:40ch}
+.tile .t-ico{position:absolute;top:26px;left:30px;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center;background:rgba(237,239,243,.04)}
+.tile .t-ico svg{width:22px;height:22px;stroke:var(--mist);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .4s}
+.tile:hover .t-ico svg{stroke:#fff}
+.tile .t-big{position:absolute;top:18px;right:26px;font-family:var(--f-display);font-weight:700;font-stretch:112%;font-size:clamp(60px,7vw,118px);letter-spacing:-.06em;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(190,200,218,.25);transition:-webkit-text-stroke-color .5s,transform .8s var(--ease-out)}
+.tile:hover .t-big{-webkit-text-stroke-color:var(--red-l);transform:translateY(-6px)}
+.t1{grid-column:span 4;grid-row:span 2;background:linear-gradient(150deg,#2A3246,var(--navy-2) 60%)}
+.t1 h3{font-size:clamp(30px,3.2vw,52px);max-width:14ch}
+.t1 .t-orbit{position:absolute;right:-60px;top:-60px;width:380px;height:380px;pointer-events:none}
+.t1 .t-orbit .ring{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(190,200,218,.25);animation:spin 40s linear infinite}
+.t1 .t-orbit .ring:nth-child(2){inset:50px;animation-duration:28s;animation-direction:reverse;border-style:solid;border-color:rgba(190,200,218,.12)}
+.t1 .t-orbit .ring:nth-child(3){inset:100px;animation-duration:18s;border-color:rgba(212,43,63,.4)}
+.t1 .t-orbit .dot{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--red-l);top:-6px;left:calc(50% - 6px);box-shadow:0 0 24px var(--red-l)}
+.t1 .t-orbit .core{position:absolute;inset:150px;border-radius:50%;background:rgba(237,239,243,.05);display:grid;place-items:center;font-family:var(--f-logo);font-size:26px;color:var(--mist)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.t2{grid-column:span 2}
+.t3{grid-column:span 2}
+.t4{grid-column:span 2}
+.t4 h3{max-width:12ch}
+.t4 .t-big{font-size:clamp(56px,5.6vw,92px);top:14px;right:22px}
+.t5{grid-column:span 2}
+.t6{grid-column:span 2}
+.tile .spark{position:absolute;left:0;right:0;top:0;height:60%;pointer-events:none;opacity:.9}
+.tile .spark svg{width:100%;height:100%}
+.tile .spark path{fill:none;stroke:var(--red-l);stroke-width:2;stroke-linecap:round}
+.tile .spark .area{fill:url(#sparkGrad);stroke:none}
+.tile .spark .pt{fill:#fff;stroke:var(--red-l);stroke-width:2}
+.tile .t-clock{position:absolute;right:26px;top:22px;width:64px;height:64px;border-radius:50%;border:1.5px solid rgba(190,200,218,.3);display:grid;place-items:center}
+.tile .t-clock i{position:absolute;left:50%;top:50%;width:2px;background:#fff;transform-origin:bottom center;border-radius:2px}
+.tile .t-clock i.h{height:16px;margin-left:-1px;margin-top:-16px;animation:spin 12s linear infinite}
+.tile .t-clock i.m{height:24px;margin-left:-1px;margin-top:-24px;background:var(--red-l);animation:spin 3s linear infinite}
+.tile .t-team{position:absolute;right:26px;top:26px;display:flex}
+.tile .t-team b{width:38px;height:38px;border-radius:50%;background:var(--slate);border:2px solid var(--navy-2);margin-left:-12px;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;transition:transform .5s var(--ease-out)}
+.tile .t-team b:nth-child(2){background:var(--slate-l)}.tile .t-team b:nth-child(3){background:var(--red)}.tile .t-team b:nth-child(4){background:var(--grey)}
+.tile:hover .t-team b{transform:translateX(calc(var(--i) * 6px))}
+
+/* ---------- Le bilan d'un partenariat ---------- */
+.bilan{margin-top:clamp(70px,8vw,120px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--ink)}
+.bilan .col{padding:clamp(28px,3.4vw,52px)}
+.bilan .col+.col{border-left:1px solid var(--line)}
+.bilan .col-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:10px}
+.bilan .col-head h3{font-size:clamp(26px,2.4vw,38px);font-stretch:108%;letter-spacing:-.04em}
+.bilan .col-head span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-dim)}
+.bilan .col.actif .col-head h3{color:#fff}
+.bilan .col.passif .col-head h3{color:var(--fg-dim)}
+.bilan .row{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px dashed rgba(237,239,243,.12);font-size:16px}
+.bilan .row .k{flex:none}
+.bilan .row .dots{flex:1;border-bottom:1px dotted rgba(237,239,243,.25);transform:translateY(-6px)}
+.bilan .row .v{flex:none;font-family:var(--f-display);font-weight:600;font-variant-numeric:tabular-nums;color:var(--mist)}
+.bilan .col.passif .row{color:var(--fg-dim)}
+.bilan .col.passif .row .k{text-decoration:line-through;text-decoration-color:var(--red-l);text-decoration-thickness:1.5px}
+.bilan .col.passif .row .v{color:var(--red-l)}
+.bilan .total{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:22px;padding:20px 22px;border-radius:14px;background:var(--red);color:#fff;font-family:var(--f-display);font-weight:600;font-size:15px}
+.bilan .total b{font-size:22px;letter-spacing:-.03em}
+.bilan .col.passif .total{background:rgba(237,239,243,.06);color:var(--fg-dim)}
+
+/* ---------- Expertise & méthode ---------- */
+#expertise .exp-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,100px);align-items:start}
+.people{display:grid;gap:18px}
+.person{
+  position:relative;display:grid;grid-template-columns:108px minmax(0,1fr);gap:26px;align-items:center;padding:26px;border-radius:20px;background:#fff;
+  box-shadow:0 30px 70px -40px rgba(20,24,33,.4),0 0 0 1px rgba(20,24,33,.05);transform-style:preserve-3d;transform:perspective(900px);overflow:hidden
+}
+.person::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .5s;background:radial-gradient(360px circle at var(--gx,50%) var(--gy,50%),rgba(177,36,52,.08),transparent 60%)}
+.person:hover::after{opacity:1}
+.person .avatar{width:108px;height:108px;border-radius:18px;background:linear-gradient(150deg,var(--navy),var(--navy-3));display:grid;place-items:center;font-family:var(--f-logo);font-size:30px;color:#fff;letter-spacing:-.04em;transform:translateZ(30px);position:relative;overflow:hidden}
+.person .avatar::after{content:"";position:absolute;inset:auto -20% -40% auto;width:90px;height:90px;border-radius:50%;background:var(--red);filter:blur(8px);opacity:.8}
+.person .avatar span{position:relative;z-index:1}
+.person .avatar span b{color:var(--red-l)}
+.person .p-body{display:flex;flex-direction:column;gap:6px;transform:translateZ(20px);min-width:0}
+.person .p-body h3{font-size:24px;letter-spacing:-.03em;font-stretch:104%}
+.person .p-body .role{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:600}
+.person .p-body p{font-size:14.5px;line-height:1.55;color:var(--fg-dark-dim);margin-top:4px}
+.skills{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.skills span{font-size:12.5px;padding:9px 14px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px rgba(20,24,33,.1);color:var(--fg-dark);transition:background .4s,color .4s,transform .4s var(--ease-out)}
+.skills span:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+.method{position:relative;padding-left:34px}
+.method::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:1px;background:var(--line-dark)}
+.method .m-fill{position:absolute;left:8px;top:8px;bottom:8px;width:1px;background:var(--red);transform-origin:top;transform:scaleY(0)}
+.step{position:relative;padding:0 0 42px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:-30px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--paper);box-shadow:0 0 0 1.5px var(--grey);transition:background .4s,box-shadow .4s}
+.step.is-on::before{background:var(--red);box-shadow:0 0 0 1.5px var(--red),0 0 0 7px rgba(177,36,52,.14)}
+.step .s-idx{font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.2em;color:var(--red)}
+.step h3{margin-top:8px;font-size:clamp(22px,2vw,30px);letter-spacing:-.035em;font-stretch:104%}
+.step p{margin-top:10px;font-size:15.5px;line-height:1.6;color:var(--fg-dark-dim);max-width:46ch}
+
+/* ---------- Territoire ---------- */
+#territoire .ter-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,5vw,80px);align-items:center}
+.map{position:relative;border-radius:24px;background:var(--ink);border:1px solid var(--line);overflow:hidden;aspect-ratio:4/3;max-width:100%}
+.map svg{width:100%;height:100%}
+.map .route{stroke:var(--red-l);stroke-width:1.6;stroke-dasharray:6 7;fill:none}
+.map .route-draw{stroke:#fff;stroke-width:1.5;fill:none}
+.map .city{fill:#fff}
+.map .halo{fill:none;stroke:var(--red-l);stroke-width:1.2;transform-origin:center;transform-box:fill-box;animation:halo 2.6s ease-out infinite}
+.map .halo.d2{animation-delay:1.3s}
+@keyframes halo{0%{transform:scale(.3);opacity:1}100%{transform:scale(2.4);opacity:0}}
+.map text{font-family:var(--f-display);font-weight:600;fill:#fff;letter-spacing:.02em}
+.map text.sub{fill:rgba(237,239,243,.55);font-weight:400;font-size:9px;letter-spacing:.12em}
+.map .dist{fill:var(--mist);font-size:10px;font-weight:600;letter-spacing:.2em}
+.map .legend{position:absolute;left:20px;bottom:18px;display:flex;gap:10px;align-items:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-dim)}
+.map .legend i{width:8px;height:8px;border-radius:50%;background:var(--red-l)}
+.addr-list{display:grid;gap:14px;margin-top:30px}
+.addr{display:grid;grid-template-columns:54px minmax(0,1fr) auto;gap:20px;align-items:center;padding:22px 24px;border-radius:18px;border:1px solid var(--line);background:var(--navy-2);transition:border-color .4s,transform .5s var(--ease-out)}
+.addr:hover{border-color:rgba(212,43,63,.45);transform:translateX(6px)}
+.addr .a-idx{font-family:var(--f-logo);font-size:17px;color:var(--mist);text-align:center}
+.addr b{display:block;font-family:var(--f-display);font-weight:600;font-size:19px;letter-spacing:-.02em}
+.addr span{display:block;font-size:14.5px;color:var(--fg-dim);margin-top:3px}
+.addr .a-go{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .4s,border-color .4s}
+.addr:hover .a-go{background:var(--red);border-color:var(--red)}
+.addr .a-go svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- Contact ---------- */
+#contact{background:radial-gradient(90% 80% at 80% 110%,rgba(177,36,52,.55),transparent 60%),radial-gradient(60% 60% at 0% 0%,rgba(66,91,138,.45),transparent 60%),var(--ink);overflow:hidden}
+#contact .ct-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,110px);align-items:start}
+#contact h2{font-size:clamp(44px,6.6vw,104px);font-stretch:106%;letter-spacing:-.045em;line-height:.92}
+#contact h2 .serif{color:var(--mist)}
+.ct-left p{margin-top:28px;font-size:18px;line-height:1.65;color:var(--fg-dim);max-width:44ch}
+.ct-direct{margin-top:40px;display:grid;gap:10px}
+.ct-direct a,.ct-direct div{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-family:var(--f-display);font-weight:500;font-size:clamp(18px,1.8vw,26px);letter-spacing:-.02em;transition:padding-left .5s var(--ease-out)}
+.ct-direct a:hover{padding-left:12px}
+.ct-direct small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-dim);font-weight:500}
+.ct-direct .copy{font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;border-radius:999px;border:1px solid var(--line);color:var(--fg-dim);transition:background .3s,color .3s,border-color .3s;flex:none}
+.ct-direct .copy:hover{background:#fff;color:var(--navy);border-color:#fff}
+.form{position:relative;padding:clamp(26px,3vw,44px);border-radius:24px;background:rgba(237,239,243,.04);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.form .f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{position:relative;display:flex;flex-direction:column;gap:8px;margin-bottom:18px;min-width:0}
+.field label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-dim);font-weight:600}
+.field input,.field textarea,.field select{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(237,239,243,.25);color:#fff;font:inherit;font-size:17px;padding:10px 0 14px;outline:none;border-radius:0;transition:border-color .3s;resize:vertical;min-width:0}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--red-l)}
+.field select option{color:#111}
+.field textarea{min-height:110px}
+.field::after{content:"";position:absolute;left:0;bottom:18px;height:1.5px;width:100%;background:var(--red-l);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease-out)}
+.field:focus-within::after{transform:scaleX(1)}
+.form .f-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:10px}
+.form .f-foot small{font-size:12.5px;color:var(--fg-dim);max-width:30ch;line-height:1.5}
+.form .f-ok{position:absolute;inset:0;border-radius:inherit;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:30px;opacity:0;pointer-events:none;transition:opacity .5s}
+.form.sent .f-ok{opacity:1;pointer-events:auto}
+.form .f-ok .ok-ico{width:72px;height:72px;border-radius:50%;background:var(--red);display:grid;place-items:center}
+.form .f-ok .ok-ico svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.form .f-ok h3{font-size:28px;letter-spacing:-.03em}
+.form .f-ok p{color:var(--fg-dim);max-width:34ch}
+
+/* ---------- Pied de page ---------- */
+footer{background:var(--ink);border-top:1px solid var(--line);padding-block:60px 30px;color:var(--fg-dim);font-size:14px}
+footer .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+footer .ft-grid h4{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg);font-weight:600;margin-bottom:18px}
+footer .ft-grid ul{display:grid;gap:10px}
+footer .ft-grid a{transition:color .3s;position:relative}
+footer .ft-grid a:hover{color:#fff}
+footer .ft-brand p{max-width:34ch;line-height:1.6;margin-top:18px}
+footer .ft-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:26px;border-top:1px solid var(--line);font-size:12.5px}
+footer .ft-bottom a:hover{color:#fff}
+.to-top{position:fixed;right:calc(22px + env(safe-area-inset-right,0px));bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:700;width:52px;height:52px;border-radius:50%;background:var(--red);display:grid;place-items:center;opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s var(--ease-out),background .3s;box-shadow:0 14px 30px -10px rgba(177,36,52,.7)}
+.to-top.show{opacity:1;transform:none}
+.to-top:hover{background:var(--red-l)}
+.to-top svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- Révélations ---------- */
+.w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .06em .14em 0;margin:0 -.06em -.14em 0}
+.wi{display:inline-block;will-change:transform}
+.reveal{opacity:1}
+[data-reveal]{will-change:transform,opacity}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .hero-top{grid-template-columns:1fr}
+  .hero-bottom{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bento{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .t1{grid-column:span 2}
+  .t2,.t3,.t4,.t5,.t6{grid-column:span 1}
+  footer .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  :root{--nav-h:68px}
+  .nav-links,.nav-cta .btn{display:none}
+  .burger{display:grid}
+  .sec-head{grid-template-columns:1fr;gap:20px}
+  #cabinet .cab-grid{grid-template-columns:1fr}
+  .counters{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .counter{padding:26px 16px 26px 0}
+  .counter:nth-child(2n){border-right:0}
+  .counter:nth-child(n+3){border-top:1px solid var(--line-dark)}
+  .counter:not(:first-child){padding-left:0}
+  .counter:nth-child(2n){padding-left:16px}
+  #metiers .pin{min-height:0;padding-block:clamp(70px,10vw,110px)}
+  #metiers .m-head{flex-direction:column;align-items:flex-start;gap:18px}
+  #metiers .m-count{display:none!important}
+  .m-track{flex-direction:column;width:auto;padding:0;gap:16px}
+  .m-track::after{display:none}
+  .mcard{width:100%;min-height:0}
+  .jcard{grid-template-columns:1fr;position:relative;top:auto!important}
+  .jcard .j-right{border-left:0;padding-left:0;border-top:1px solid var(--line-dark);padding-top:22px}
+  .bilan{grid-template-columns:1fr}
+  .bilan .col+.col{border-left:0;border-top:1px solid var(--line)}
+  #expertise .exp-grid{grid-template-columns:1fr}
+  #territoire .ter-grid{grid-template-columns:1fr}
+  #contact .ct-grid{grid-template-columns:1fr}
+  .form .f-row{grid-template-columns:1fr}
+  .hero-mark{display:none}
+  .scroll-cue{display:none}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .hero-bottom{grid-template-columns:1fr 1fr;gap:18px}
+  .bento{grid-template-columns:1fr}
+  .t1,.t2,.t3,.t4,.t5,.t6{grid-column:span 1}
+  .t1 .t-orbit{right:-120px;top:-120px}
+  .person{grid-template-columns:1fr}
+  .addr{grid-template-columns:1fr;gap:10px}
+  .addr .a-go{display:none}
+  .addr .a-idx{text-align:left}
+  footer .ft-grid{grid-template-columns:1fr}
+  .mcard{padding:26px 22px}
+  .mcard .m-ghost{font-size:160px}
+  .jcard .j-num{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .marquee .mq-track{animation:none}
+  #hero-canvas{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ PRÉCHARGEUR ============ -->
+<div id="loader" aria-hidden="true">
+  <svg class="ld-logo" viewBox="0 0 150 128" role="img" aria-label="SG Conseils">
+    <text x="0" y="78" font-family="Michroma, Eurostile, 'Arial Black', sans-serif" font-size="84" fill="#B12434" letter-spacing="-8">S</text>
+    <text x="70" y="78" font-family="Michroma, Eurostile, 'Arial Black', sans-serif" font-size="84" fill="#858384">G</text>
+    <text x="4" y="118" font-family="Archivo, system-ui, sans-serif" font-weight="300" font-size="30" fill="#858384" letter-spacing="1.5">conseils</text>
+  </svg>
+  <div class="ld-count"><span id="ld-num">0</span><sup>%</sup></div>
+  <div class="ld-bar"><i id="ld-fill"></i></div>
+  <div class="ld-tag">Expertise comptable · Toulouse · Lauragais</div>
+</div>
+
+<div id="cursor" aria-hidden="true"><div class="c-dot"></div><div class="c-ring"><span>Découvrir</span></div></div>
+<div id="progress" aria-hidden="true"></div>
+
+<!-- ============ NAVIGATION ============ -->
+<header id="nav">
+  <div class="nav-in">
+    <a href="#hero" class="logo" aria-label="SG Conseils, retour en haut">
+      <span class="logo-plate">
+        <svg viewBox="0 0 150 128" width="52" height="44" role="img" aria-label="Logo SG Conseils">
+          <text x="0" y="78" font-family="Michroma, Eurostile, 'Arial Black', sans-serif" font-size="84" fill="#B12434" letter-spacing="-8">S</text>
+          <text x="70" y="78" font-family="Michroma, Eurostile, 'Arial Black', sans-serif" font-size="84" fill="#858384">G</text>
+          <text x="4" y="118" font-family="Archivo, system-ui, sans-serif" font-weight="300" font-size="30" fill="#858384" letter-spacing="1.5">conseils</text>
+        </svg>
+      </span>
+      <span class="logo-txt"><b>SG Conseils</b><small>Expertise comptable</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#cabinet">Le cabinet</a>
+      <a href="#metiers">Métiers</a>
+      <a href="#parcours">Accompagnement</a>
+      <a href="#pourquoi">Pourquoi nous</a>
+      <a href="#expertise">Expertise</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn magnetic">Prendre rendez-vous <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<div id="menu" aria-hidden="true" data-lenis-prevent>
+  <a class="m-link" href="#cabinet"><span>01</span>Le cabinet</a>
+  <a class="m-link" href="#metiers"><span>02</span>Métiers</a>
+  <a class="m-link" href="#parcours"><span>03</span>Accompagnement</a>
+  <a class="m-link" href="#pourquoi"><span>04</span>Pourquoi nous</a>
+  <a class="m-link" href="#expertise"><span>05</span>Expertise</a>
+  <a class="m-link" href="#contact"><span>06</span>Contact</a>
+  <div class="m-foot">
+    <div><b>Toulouse</b>6 chemin de Limayrac, 31500</div>
+    <div><b>Villefranche-de-Lauragais</b>79 rue de la République, 31290</div>
+    <div><b>Téléphone</b>09 73 61 17 22</div>
+  </div>
+</div>
+
+<main>
+<!-- ============ HÉRO ============ -->
+<section id="hero" aria-label="Introduction">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="h3d-ui" aria-hidden="true">
+    <span class="h3d-label h3d-year" data-u="0.02">2015</span>
+    <span class="h3d-label h3d-year" data-u="0.26">2018</span>
+    <span class="h3d-label h3d-year" data-u="0.5">2021</span>
+    <span class="h3d-label h3d-year h3d-year--today" data-u="0.68">Aujourd'hui</span>
+    <span class="h3d-label h3d-year h3d-year--future" data-u="0.9">Prévisionnel</span>
+    <span class="h3d-label h3d-chip" data-u="0.38" data-row="0.08"><i></i>Chiffre d'affaires</span>
+    <span class="h3d-label h3d-chip" data-u="0.6" data-row="0.62"><i></i>Trésorerie</span>
+    <span class="h3d-label h3d-chip h3d-chip--future" data-u="0.86" data-row="0.78"><i></i>Résultat prévisionnel</span>
+    <span class="h3d-tip" id="h3d-tip"><b>Trésorerie</b><span>2019</span></span>
+  </div>
+  <div class="hero-grid"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-mark" aria-hidden="true" data-parallax="-0.25">SG</div>
+  <div class="wrap wrap--wide hero-in">
+    <div class="hero-top">
+      <div class="hero-main" data-mouse="10">
+        <div class="hero-eyebrow"><span class="pulse"></span><span class="label label--plain">Cabinet d'expertise comptable · Toulouse & Lauragais</span></div>
+        <h1 class="hero-title" id="hero-title">Le cabinet qui pense comme un <span class="serif serif--red">dirigeant.</span></h1>
+      <div class="hero-side">
+        <p>Comptabilité, audit, juridique, conseil, gestion, social et informatique : <strong>sept expertises réunies</strong> dans un cabinet à taille humaine, pour accompagner les entrepreneurs à chaque décision qui compte.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn magnetic">Parlons de votre entreprise <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a href="#metiers" class="btn btn--ghost magnetic">Nos 7 métiers <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+        </div>
+        <div class="h3d-legend" aria-label="Lecture du graphique en relief">
+          <span class="h3d-legend-title">Votre activité en relief, du bilan au prévisionnel</span>
+          <span><i class="sw sw-past"></i>Réalisé 2015 → aujourd'hui</span>
+          <span><i class="sw sw-fut"></i>Prévisionnel</span>
+          <span><i class="sw sw-line"></i>Tendance</span>
+        </div>
+      </div>
+      </div>
+      <div class="hero-spacer" aria-hidden="true"></div>
+    </div>
+    <div class="hero-bottom">
+      <div class="fact"><b class="num">2015</b><span>Création du cabinet à Toulouse</span></div>
+      <div class="fact"><b class="num">7<sup>métiers</sup></b><span>Un seul interlocuteur pour tous</span></div>
+      <div class="fact"><b class="num">2<sup>agences</sup></b><span>Toulouse & Villefranche-de-Lauragais</span></div>
+      <div class="fact"><b>Ordre</b><span>Expert-comptable inscrite à l'Ordre</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span>Défiler</span><i></i></div>
+</section>
+
+<!-- ============ BANDEAU ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track" id="mq-track">
+    <div class="mq-item"><span>Comptabilité</span><i></i><span>Audit</span><i></i><span>Juridique</span><i></i><span>Conseil</span><i></i><span>Gestion</span><i></i><span>Social / RH</span><i></i><span>Informatique</span><i></i><em>Pour le développement de vos entreprises</em><i></i></div>
+  </div>
+</div>
+
+<!-- ============ LE CABINET ============ -->
+<section id="cabinet" class="block s-light">
+  <div class="cab-bg" aria-hidden="true" data-parallax="0.18">DEPUIS 2015</div>
+  <div class="wrap">
+    <span class="label">Le cabinet</span>
+    <div class="cab-grid" style="margin-top:26px">
+      <p class="manifesto" id="manifesto">Un bilan n'est pas une fin d'exercice. C'est le point de départ de vos prochaines décisions. Chez SG Conseils, chaque chiffre est lu, commenté et transformé en <span class="serif">levier</span> pour votre entreprise.</p>
+      <div class="cab-side">
+        <p data-reveal>Fondé à Toulouse en 2015 par <strong>Evelyne Sauvagnac</strong>, expert-comptable inscrite à l'Ordre depuis 2014, SG Conseils accompagne TPE, PME, professions libérales et indépendants sur l'ensemble de leur vie d'entreprise : création, croissance, structuration, transmission.</p>
+        <p data-reveal>Deux agences, à Toulouse et à Villefranche-de-Lauragais, et une équipe à taille humaine qui <strong>connaît votre dossier</strong>, décroche le téléphone et répond vite. Pas de plateforme anonyme : des experts qui s'impliquent dans votre stratégie.</p>
+        <blockquote class="quote" data-reveal>« Nous ne produisons pas des comptes. Nous donnons aux dirigeants les moyens de décider. »<small>La conviction du cabinet</small></blockquote>
+      </div>
+    </div>
+    <div class="counters">
+      <div class="counter" data-reveal><b><span class="num" data-count="2015" data-start="1990">2015</span></b><span>Année de création du cabinet, à Toulouse</span></div>
+      <div class="counter" data-reveal><b><span class="num" data-count="7">7</span><em>métiers</em></b><span>Comptable, juridique, social, audit, gestion, conseil, informatique</span></div>
+      <div class="counter" data-reveal><b><span class="num" data-count="2">2</span><em>agences</em></b><span>Toulouse et Villefranche-de-Lauragais</span></div>
+      <div class="counter" data-reveal><b><span class="num" data-count="1">1</span><em>interlocuteur</em></b><span>Dédié à votre dossier, du premier appel au bilan</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTIERS ============ -->
+<section id="metiers" class="s-dark" aria-label="Nos métiers">
+  <div class="pin" id="metiers-pin">
+    <div class="wrap wrap--wide">
+      <div class="m-head">
+        <div>
+          <span class="label">Nos métiers</span>
+          <h2 style="margin-top:22px">Sept expertises.<br>Une seule <span class="serif serif--red">équipe.</span></h2>
+        </div>
+        <div class="m-count"><b id="m-cur">01</b><div class="m-progress"><i id="m-bar"></i></div><span>/ 07</span></div>
+      </div>
+    </div>
+    <div class="m-track" id="m-track">
+
+      <article class="mcard tilt" data-tilt="7" data-cursor="Découvrir">
+        <i class="m-line"></i><span class="m-ghost">01</span>
+        <div class="m-top"><span class="m-idx">01 / 07</span><span class="m-tag">Le socle</span></div>
+        <div class="m-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div>
+        <h3>Comptabilité</h3>
+        <p class="m-catch">Pas uniquement une histoire de chiffres.</p>
+        <p class="m-desc">Bilan annuel, compte de résultat, déclarations fiscales : la base, tenue avec rigueur, puis analysée et commentée pour anticiper vos décisions.</p>
+        <ul><li>Tenue, révision et établissement des comptes</li><li>Outils en ligne : dépôt de documents, partage complet de gestion</li><li>Information chiffrée fiable, rapide et commentée</li></ul>
+        <div class="m-foot"><a href="#contact" class="link">En parler</a><span class="dim" style="font-size:12px">Compta en ligne</span></div>
+      </article>
+
+      <article class="mcard tilt" data-tilt="7" data-cursor="Découvrir">
+        <i class="m-line"></i><span class="m-ghost">02</span>
+        <div class="m-top"><span class="m-idx">02 / 07</span><span class="m-tag">La confiance</span></div>
+        <div class="m-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M8 11l2 2 4-4"/></svg></div>
+        <h3>Audit</h3>
+        <p class="m-catch">Atteignez vos objectifs.</p>
+        <p class="m-desc">Une vision claire et certifiée de la santé financière de votre entreprise, pour rassurer vos partenaires et sécuriser votre croissance.</p>
+        <ul><li>Certification des comptes et conformité aux normes</li><li>Amélioration du contrôle interne et des processus</li><li>Prévention et gestion des risques de l'activité</li></ul>
+        <div class="m-foot"><a href="#contact" class="link">En parler</a><span class="dim" style="font-size:12px">Audit légal & contractuel</span></div>
+      </article>
+
+      <article class="mcard tilt" data-tilt="7" data-cursor="Découvrir">
+        <i class="m-line"></i><span class="m-ghost">03</span>
+        <div class="m-top"><span class="m-idx">03 / 07</span><span class="m-tag">Le cadre</span></div>
+        <div class="m-icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 006 0zM17 7l-3 7a3 3 0 006 0z"/></svg></div>
+        <h3>Juridique</h3>
+        <p class="m-catch">Simplifiez-vous la vie.</p>
+        <p class="m-desc">Statuts, baux, assemblées, mouvements de capital : nos juristes formalisent vos opérations dans tous les domaines du droit des affaires.</p>
+        <ul><li>Droit des sociétés : constitution, capital, cessions, AG</li><li>Entreprise individuelle et régimes spécifiques</li><li>Droit fiscal : déclarations, TVA, obligations</li></ul>
+        <div class="m-foot"><a href="#contact" class="link">En parler</a><span class="dim" style="font-size:12px">Secrétariat juridique</span></div>
+      </article>
+
+      <article class="mcard tilt" data-tilt="7" data-cursor="Découvrir">
+        <i class="m-line"></i><span class="m-ghost">04</span>
+        <div class="m-top"><span class="m-idx">04 / 07</span><span class="m-tag">La stratégie</span></div>
+        <div class="m-icon"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+        <h3>Conseil</h3>
+        <p class="m-catch">Mieux vous accompagner au quotidien.</p>
+        <p class="m-desc">Nous nous impliquons dans votre stratégie et vos projets de croissance, avec un accompagnement personnalisé pour maîtriser vos coûts.</p>
+        <ul><li>Création d'entreprise et choix de structure</li><li>Optimisation fiscale et gestion patrimoniale</li><li>Projets de croissance, investissement, transmission</li></ul>
+        <div class="m-foot"><a href="#contact" class="link">En parler</a><span class="dim" style="font-size:12px">Sur-mesure</span></div>
+      </article>
+
+      <article class="mcard tilt" data-tilt="7" data-cursor="Découvrir">
+        <i class="m-line"></i><span class="m-ghost">05</span>
+        <div class="m-top"><span class="m-idx">05 / 07</span><span class="m-tag">Le pilotage</span></div>
+        <div class="m-icon"><svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 110-18 9 9 0 010 18z"/><path d="M12 12l4-3M12 7v1M17 12h-1M7 12h1"/></svg></div>
+        <h3>Gestion</h3>
+        <p class="m-catch">Un accompagnement complet.</p>
+        <p class="m-desc">À chaque étape du cycle de vie de votre entreprise, un suivi de gestion réel et des conseils sur-mesure pour prendre les bonnes décisions.</p>
+        <ul><li>Tableaux de bord et suivi d'activité</li><li>Anticipation des risques, approche globale</li><li>Prévisionnels réalistes et objectifs ajustés</li></ul>
+        <div class="m-foot"><a href="#contact" class="link">En parler</a><span class="dim" style="font-size:12px">Contrôle de gestion</span></div>
+      </article>
+
+      <article class="mcard tilt" data-tilt="7" data-cursor="Découvrir">
+        <i class="m-line"></i><span class="m-ghost">06</span>
+        <div class="m-top"><span class="m-idx">06 / 07</span><span class="m-tag">L'humain</span></div>
+        <div class="m-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5A5 5 0 0121.5 20"/></svg></div>
+        <h3>Social / RH</h3>
+        <p class="m-catch">L'expertise RH qu'il vous faut.</p>
+        <p class="m-desc">Face aux changements constants du droit social, un suivi régulier de la gestion du personnel pour rester toujours confiant.</p>
+        <ul><li>Paie et bulletins, déclarations sociales</li><li>Contrats, congés, gestion du personnel</li><li>Veille sur les réformes, appui au recrutement</li></ul>
+        <div class="m-foot"><a href="#contact" class="link">En parler</a><span class="dim" style="font-size:12px">Paie externalisée</span></div>
+      </article>
+
+      <article class="mcard tilt" data-tilt="7" data-cursor="Découvrir">
+        <i class="m-line"></i><span class="m-ghost">07</span>
+        <div class="m-top"><span class="m-idx">07 / 07</span><span class="m-tag">Les outils</span></div>
+        <div class="m-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 12l3-3 2 2 4-4"/></svg></div>
+        <h3>Informatique</h3>
+        <p class="m-catch">Gagnez du temps.</p>
+        <p class="m-desc">Une organisation administrative, comptable et informatique optimale, adaptée à vos habitudes et vos contraintes, pour vous libérer du temps.</p>
+        <ul><li>Choix et mise en place des bons outils</li><li>Prise en main et adaptation à vos besoins</li><li>Accès en temps réel, indépendance et transparence</li></ul>
+        <div class="m-foot"><a href="#contact" class="link">En parler</a><span class="dim" style="font-size:12px">Dématérialisation</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACCOMPAGNEMENT ============ -->
+<section id="parcours" class="block s-light">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="label">Votre quotidien, notre terrain</span><h2 data-split>À chaque étape de votre vie d'entrepreneur, <span class="serif serif--red">un cabinet à vos côtés.</span></h2></div>
+      <p class="lead">Un dirigeant ne se pose pas des questions de comptabilité. Il se pose des questions d'entreprise. Voici comment nous y répondons, avec les bonnes expertises au bon moment.</p>
+    </div>
+    <div class="stack" id="stack">
+
+      <article class="jcard">
+        <span class="j-num" aria-hidden="true">01</span>
+        <div class="j-left">
+          <span class="j-step"><i></i>Étape 01</span>
+          <h3>Je crée mon entreprise</h3>
+          <p class="j-you">« SARL, SAS, entreprise individuelle ? Quel régime fiscal ? Par où commencer ? »</p>
+        </div>
+        <div class="j-right">
+          <h4>Ce que nous faisons</h4>
+          <ul>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Étude du statut juridique, fiscal et social le plus adapté à votre projet</li>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Prévisionnel financier crédible pour vous et vos financeurs</li>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Rédaction des statuts, immatriculation, premières formalités</li>
+          </ul>
+          <div class="j-tags"><span>Juridique</span><span>Conseil</span><span class="alt">Comptabilité</span></div>
+        </div>
+      </article>
+
+      <article class="jcard">
+        <span class="j-num" aria-hidden="true">02</span>
+        <div class="j-left">
+          <span class="j-step"><i></i>Étape 02</span>
+          <h3>J'embauche mon premier salarié</h3>
+          <p class="j-you">« Contrat, paie, charges, congés : je ne veux pas me tromper dès le départ. »</p>
+        </div>
+        <div class="j-right">
+          <h4>Ce que nous faisons</h4>
+          <ul>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Formalités d'embauche, contrat de travail, convention collective</li>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Bulletins de paie et déclarations sociales, chaque mois, sans retard</li>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Veille réglementaire : vous restez à jour sans y penser</li>
+          </ul>
+          <div class="j-tags"><span>Social / RH</span><span>Juridique</span></div>
+        </div>
+      </article>
+
+      <article class="jcard">
+        <span class="j-num" aria-hidden="true">03</span>
+        <div class="j-left">
+          <span class="j-step"><i></i>Étape 03</span>
+          <h3>Je veux piloter, pas subir</h3>
+          <p class="j-you">« Je découvre mes chiffres trop tard. Je veux savoir où j'en suis, maintenant. »</p>
+        </div>
+        <div class="j-right">
+          <h4>Ce que nous faisons</h4>
+          <ul>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Tableaux de bord et suivi de trésorerie, lisibles et commentés</li>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Outils en ligne : vos documents et vos indicateurs accessibles en temps réel</li>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Points réguliers pour ajuster les objectifs et anticiper les risques</li>
+          </ul>
+          <div class="j-tags"><span>Gestion</span><span>Informatique</span><span class="alt">Comptabilité</span></div>
+        </div>
+      </article>
+
+      <article class="jcard">
+        <span class="j-num" aria-hidden="true">04</span>
+        <div class="j-left">
+          <span class="j-step"><i></i>Étape 04</span>
+          <h3>L'administration frappe à la porte</h3>
+          <p class="j-you">« Contrôle fiscal, URSSAF, question de TVA : j'ai besoin d'être sûr de moi. »</p>
+        </div>
+        <div class="j-right">
+          <h4>Ce que nous faisons</h4>
+          <ul>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Préparation du dossier et réponse argumentée à l'administration</li>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Sécurisation de vos obligations fiscales et sociales</li>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Renforcement du contrôle interne pour que cela ne se reproduise pas</li>
+          </ul>
+          <div class="j-tags"><span>Juridique</span><span>Audit</span><span class="alt">Comptabilité</span></div>
+        </div>
+      </article>
+
+      <article class="jcard">
+        <span class="j-num" aria-hidden="true">05</span>
+        <div class="j-left">
+          <span class="j-step"><i></i>Étape 05</span>
+          <h3>Je développe, j'investis, je transmets</h3>
+          <p class="j-you">« Racheter un concurrent, ouvrir un site, préparer ma cession : quelle est la bonne route ? »</p>
+        </div>
+        <div class="j-right">
+          <h4>Ce que nous faisons</h4>
+          <ul>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Audit et évaluation d'entreprise, analyse de la cible ou de votre société</li>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Montage juridique et fiscal de l'opération</li>
+            <li><b><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></b>Optimisation fiscale et gestion patrimoniale du dirigeant</li>
+          </ul>
+          <div class="j-tags"><span>Audit</span><span>Conseil</span><span>Juridique</span></div>
+        </div>
+      </article>
+
+    </div>
+    <div class="stack-end"></div>
+  </div>
+</section>
+
+<!-- ============ POURQUOI NOUS ============ -->
+<section id="pourquoi" class="block s-dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="label">Notre plus-value</span><h2 data-split>Ce qui fait la différence, <span class="serif serif--red">au quotidien.</span></h2></div>
+      <p class="lead">Le marché est rempli de cabinets qui tiennent des comptes et de plateformes qui automatisent des écritures. SG Conseils fait autre chose : accompagner des dirigeants, avec des experts qui se parlent entre eux et qui vous parlent.</p>
+    </div>
+    <div class="bento">
+      <div class="tile t1 glow">
+        <div class="t-orbit" aria-hidden="true"><div class="ring"><i class="dot"></i></div><div class="ring"></div><div class="ring"><i class="dot"></i></div><div class="core">SG</div></div>
+        <div class="t-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div>
+        <h3>Un seul interlocuteur pour sept expertises</h3>
+        <p>Comptable, juriste, gestionnaire de paie, auditeur, conseil : chez SG Conseils, ils travaillent sur le même dossier, dans les mêmes bureaux. Vous n'expliquez jamais deux fois votre situation.</p>
+      </div>
+      <div class="tile t2 glow">
+        <div class="t-clock" aria-hidden="true"><i class="h"></i><i class="m"></i></div>
+        <h3>Une réponse, pas un ticket</h3>
+        <p>Une ligne directe, un interlocuteur qui connaît votre entreprise et des réponses rapides. La réactivité est une promesse tenue, pas un argument commercial.</p>
+      </div>
+      <div class="tile t3 glow">
+        <div class="spark" aria-hidden="true">
+          <svg viewBox="0 0 300 120" preserveAspectRatio="none">
+            <defs><linearGradient id="sparkGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D42B3F" stop-opacity=".35"/><stop offset="1" stop-color="#D42B3F" stop-opacity="0"/></linearGradient></defs>
+            <path class="area" d="M0 95 L40 88 L80 92 L120 70 L160 76 L200 50 L240 58 L280 28 L300 30 L300 120 L0 120Z"/>
+            <path class="spark-line" d="M0 95 L40 88 L80 92 L120 70 L160 76 L200 50 L240 58 L280 28 L300 30"/>
+            <circle class="pt" cx="280" cy="28" r="4"/>
+          </svg>
+        </div>
+        <h3>Vos chiffres en temps réel</h3>
+        <p>Dépôt de documents en ligne, partage complet de gestion, indicateurs accessibles quand vous en avez besoin. Vous décidez avec des données fraîches, pas avec le bilan de l'an dernier.</p>
+      </div>
+      <div class="tile t4 glow">
+        <span class="t-big" aria-hidden="true">35<small style="font-size:.3em;-webkit-text-stroke-width:.6px">km</small></span>
+        <h3>Toulouse et le Lauragais, la proximité pour de vrai</h3>
+        <p>Deux agences, à Toulouse et à Villefranche-de-Lauragais. Vos experts sont à côté, pas dans un centre d'appels.</p>
+      </div>
+      <div class="tile t5 glow">
+        <div class="t-team" aria-hidden="true"><b style="--i:0">ES</b><b style="--i:1">LS</b><b style="--i:2">SG</b><b style="--i:3">+</b></div>
+        <h3>Une équipe à taille humaine</h3>
+        <p>Assez grande pour couvrir toutes vos problématiques, assez proche pour que chacun connaisse votre dossier par son nom.</p>
+      </div>
+      <div class="tile t6 glow">
+        <div class="t-ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Indépendance et transparence</h3>
+        <p>Vous accédez à toutes vos informations, à tout moment. Un cabinet indépendant, inscrit à l'Ordre, qui n'a d'autre intérêt que le vôtre.</p>
+      </div>
+    </div>
+
+    <div class="bilan" id="bilan">
+      <div class="col actif">
+        <div class="col-head"><h3>Actif</h3><span>Ce que vous gagnez</span></div>
+        <div class="row" data-reveal><span class="k">Une vision claire de votre trésorerie</span><span class="dots"></span><span class="v">chaque mois</span></div>
+        <div class="row" data-reveal><span class="k">Des décisions prises avec des chiffres frais</span><span class="dots"></span><span class="v">en continu</span></div>
+        <div class="row" data-reveal><span class="k">Du temps rendu à votre cœur de métier</span><span class="dots"></span><span class="v">des heures / semaine</span></div>
+        <div class="row" data-reveal><span class="k">Un interlocuteur qui connaît votre dossier</span><span class="dots"></span><span class="v">un seul</span></div>
+        <div class="row" data-reveal><span class="k">La sérénité face à l'administration</span><span class="dots"></span><span class="v">toute l'année</span></div>
+        <div class="total"><span>Résultat de l'exercice</span><b>Une entreprise pilotée</b></div>
+      </div>
+      <div class="col passif">
+        <div class="col-head"><h3>Passif</h3><span>Ce que vous laissez derrière vous</span></div>
+        <div class="row" data-reveal><span class="k">Le bilan découvert six mois trop tard</span><span class="dots"></span><span class="v">supprimé</span></div>
+        <div class="row" data-reveal><span class="k">Les mauvaises surprises fiscales</span><span class="dots"></span><span class="v">anticipées</span></div>
+        <div class="row" data-reveal><span class="k">Les soirées de paperasse</span><span class="dots"></span><span class="v">déléguées</span></div>
+        <div class="row" data-reveal><span class="k">Expliquer trois fois la même chose</span><span class="dots"></span><span class="v">terminé</span></div>
+        <div class="row" data-reveal><span class="k">Décider à l'aveugle</span><span class="dots"></span><span class="v">plus jamais</span></div>
+        <div class="total"><span>Report à nouveau</span><b>Zéro charge mentale</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERTISE & MÉTHODE ============ -->
+<section id="expertise" class="block s-light">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="label">Expérience & compétences</span><h2 data-split>Des experts qui s'engagent, <span class="serif serif--red">une méthode qui rassure.</span></h2></div>
+      <p class="lead">L'expertise comptable est une profession réglementée. Chez SG Conseils, elle est aussi une relation : des dirigeants qui parlent à des dirigeants, avec une façon de travailler claire dès le premier jour.</p>
+    </div>
+    <div class="exp-grid">
+      <div>
+        <div class="people">
+          <article class="person tilt" data-tilt="5">
+            <div class="avatar"><span><b>E</b>S</span></div>
+            <div class="p-body">
+              <span class="role">Expert-comptable · Fondatrice</span>
+              <h3>Evelyne Sauvagnac</h3>
+              <p>Inscrite à l'Ordre des experts-comptables depuis 2014, elle fonde SG Conseils à Toulouse en 2015 avec une idée simple : faire du cabinet un partenaire de décision, pas un prestataire de bilans.</p>
+            </div>
+          </article>
+          <article class="person tilt" data-tilt="5">
+            <div class="avatar"><span><b>L</b>S</span></div>
+            <div class="p-body">
+              <span class="role">Dirigeant associé</span>
+              <h3>Laurent Sauvagnac</h3>
+              <p>Co-dirigeant du cabinet, il porte avec Evelyne le développement des deux agences et l'exigence d'un accompagnement sur-mesure pour chaque entreprise suivie.</p>
+            </div>
+          </article>
+        </div>
+        <div class="skills" data-reveal>
+          <span>Expertise comptable</span><span>Commissariat aux comptes</span><span>Droit des sociétés</span><span>Droit fiscal</span><span>Paie & droit social</span><span>Contrôle de gestion</span><span>Création d'entreprise</span><span>Transmission</span><span>Gestion patrimoniale</span><span>Outils dématérialisés</span>
+        </div>
+      </div>
+      <div class="method" id="method">
+        <i class="m-fill" id="m-fill"></i>
+        <div class="step"><span class="s-idx">Étape 01</span><h3>Le diagnostic</h3><p>Un premier rendez-vous pour comprendre votre entreprise, votre marché, vos contraintes et vos ambitions. Nous écoutons avant de proposer.</p></div>
+        <div class="step"><span class="s-idx">Étape 02</span><h3>La mise en place</h3><p>Organisation administrative, outils en ligne, calendrier des échéances : tout est cadré pour que la collaboration soit fluide dès le premier mois.</p></div>
+        <div class="step"><span class="s-idx">Étape 03</span><h3>Le suivi régulier</h3><p>Comptabilité, paie, juridique et déclarations traitées dans les délais, avec des indicateurs commentés et un point à chaque étape clé.</p></div>
+        <div class="step"><span class="s-idx">Étape 04</span><h3>Le pilotage et le conseil</h3><p>Au-delà de la conformité : prévisionnels, arbitrages fiscaux, projets d'investissement ou de transmission. Nous pensons votre entreprise avec vous.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TERRITOIRE ============ -->
+<section id="territoire" class="block s-dark">
+  <div class="wrap">
+    <div class="ter-grid">
+      <div>
+        <span class="label">Notre territoire</span>
+        <h2 style="margin-top:22px;font-size:clamp(34px,4.4vw,66px);letter-spacing:-.04em;line-height:.98" data-split>Deux agences, <span class="serif serif--red">une même équipe.</span></h2>
+        <p class="lead dim" style="margin-top:24px;font-size:17px;line-height:1.65;max-width:46ch">De la métropole toulousaine aux entreprises du Lauragais, nous accompagnons artisans, commerçants, professions libérales, start-up et PME. Venez nous voir, ou nous venons à vous.</p>
+        <div class="addr-list">
+          <a class="addr" href="https://www.google.com/maps/search/?api=1&query=6+chemin+de+Limayrac+31500+Toulouse" target="_blank" rel="noopener">
+            <span class="a-idx">TLS</span>
+            <span><b>Toulouse · Siège</b><span>6 chemin de Limayrac, 1er étage, 31500 Toulouse</span></span>
+            <span class="a-go"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+          <a class="addr" href="https://www.google.com/maps/search/?api=1&query=79+rue+de+la+R%C3%A9publique+31290+Villefranche-de-Lauragais" target="_blank" rel="noopener">
+            <span class="a-idx">VDL</span>
+            <span><b>Villefranche-de-Lauragais</b><span>79 rue de la République, 31290 Villefranche-de-Lauragais</span></span>
+            <span class="a-go"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+        </div>
+      </div>
+      <div class="map" id="map">
+        <svg viewBox="0 0 600 450" aria-label="Carte stylisée : Toulouse et Villefranche-de-Lauragais">
+          <defs>
+            <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="rgba(190,200,218,.22)"/></pattern>
+            <radialGradient id="mapGlow" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#425B8A" stop-opacity=".45"/><stop offset="1" stop-color="#0B0E14" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect width="600" height="450" fill="url(#mapGlow)"/>
+          <rect width="600" height="450" fill="url(#dots)"/>
+          <path d="M60 120 C 140 60, 260 70, 330 110 S 520 150, 560 260 S 470 420, 330 400 S 120 420, 70 300 S 20 170, 60 120Z" fill="none" stroke="rgba(190,200,218,.12)" stroke-width="1"/>
+          <path d="M150 150 C 180 140, 230 200, 260 170 S 330 240, 400 300" fill="none" stroke="rgba(125,147,181,.35)" stroke-width="1" stroke-dasharray="2 5"/>
+          <path d="M100 330 C 180 300, 260 330, 320 290 S 440 230, 540 240" fill="none" stroke="rgba(125,147,181,.35)" stroke-width="1" stroke-dasharray="2 5"/>
+          <path class="route" d="M205 160 Q 300 210 405 300"/>
+          <path class="route-draw" id="route-draw" d="M205 160 Q 300 210 405 300"/>
+          <g>
+            <circle class="halo" cx="205" cy="160" r="14"/>
+            <circle class="halo d2" cx="205" cy="160" r="14"/>
+            <circle cx="205" cy="160" r="22" fill="rgba(177,36,52,.25)"/>
+            <circle class="city" cx="205" cy="160" r="6"/>
+            <text x="228" y="150" font-size="15">Toulouse</text>
+            <text class="sub" x="228" y="167">SIÈGE · LIMAYRAC</text>
+          </g>
+          <g>
+            <circle class="halo" cx="405" cy="300" r="12"/>
+            <circle class="halo d2" cx="405" cy="300" r="12"/>
+            <circle cx="405" cy="300" r="18" fill="rgba(177,36,52,.25)"/>
+            <circle class="city" cx="405" cy="300" r="5"/>
+            <text x="300" y="345" font-size="15">Villefranche-de-Lauragais</text>
+            <text class="sub" x="300" y="362">AGENCE · LAURAGAIS</text>
+          </g>
+          <text class="dist" x="268" y="215" transform="rotate(26 268 215)">A61 · 35 KM</text>
+          <text class="sub" x="470" y="90">HAUTE-GARONNE (31)</text>
+          <text class="sub" x="60" y="420">OCCITANIE</text>
+        </svg>
+        <div class="legend"><i></i>Nos agences</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="block">
+  <div class="wrap">
+    <div class="ct-grid">
+      <div class="ct-left">
+        <span class="label">Prenons rendez-vous</span>
+        <h2 style="margin-top:22px" data-split>Parlons de <span class="serif">votre</span> entreprise.</h2>
+        <p>Un projet de création, un changement de cabinet, une question qui ne peut pas attendre : un premier échange, sans engagement, pour comprendre votre situation et vous dire concrètement comment nous pouvons vous aider.</p>
+        <div class="ct-direct">
+          <a href="tel:+33973611722"><span><small>Téléphone</small><br>09 73 61 17 22</span><span class="copy" data-copy="09 73 61 17 22">Copier</span></a>
+          <a href="mailto:contact@sgconseils.com"><span><small>E-mail</small><br>contact@sgconseils.com</span><span class="copy" data-copy="contact@sgconseils.com">Copier</span></a>
+          <div><span><small>Horaires</small><br>Du lundi au vendredi, sur rendez-vous</span></div>
+        </div>
+      </div>
+      <form class="form" id="form" novalidate>
+        <div class="f-row">
+          <div class="field"><label for="f-nom">Votre nom</label><input id="f-nom" name="nom" type="text" autocomplete="name" required placeholder="Prénom Nom"></div>
+          <div class="field"><label for="f-soc">Votre société</label><input id="f-soc" name="societe" type="text" autocomplete="organization" placeholder="Nom de l'entreprise"></div>
+        </div>
+        <div class="f-row">
+          <div class="field"><label for="f-mail">Votre e-mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required placeholder="vous@entreprise.fr"></div>
+          <div class="field"><label for="f-tel">Votre téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></div>
+        </div>
+        <div class="field"><label for="f-obj">Votre besoin</label>
+          <select id="f-obj" name="objet">
+            <option>Je crée mon entreprise</option>
+            <option>Je souhaite changer de cabinet</option>
+            <option>Paie et gestion sociale</option>
+            <option>Juridique, fiscalité, transmission</option>
+            <option>Audit et contrôle</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Votre message</label><textarea id="f-msg" name="message" placeholder="Décrivez votre situation en quelques lignes"></textarea></div>
+        <div class="f-foot">
+          <small>Vos données servent uniquement à vous répondre. Aucun suivi publicitaire.</small>
+          <button type="submit" class="btn magnetic">Envoyer ma demande <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        </div>
+        <div class="f-ok" aria-live="polite">
+          <div class="ok-ico"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div>
+          <h3>Message bien reçu.</h3>
+          <p>Un membre du cabinet vous recontacte rapidement pour fixer un premier échange.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ PIED DE PAGE ============ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a href="#hero" class="logo" aria-label="SG Conseils">
+          <span class="logo-plate">
+            <svg viewBox="0 0 150 128" width="52" height="44" aria-hidden="true">
+              <text x="0" y="78" font-family="Michroma, Eurostile, 'Arial Black', sans-serif" font-size="84" fill="#B12434" letter-spacing="-8">S</text>
+              <text x="70" y="78" font-family="Michroma, Eurostile, 'Arial Black', sans-serif" font-size="84" fill="#858384">G</text>
+              <text x="4" y="118" font-family="Archivo, system-ui, sans-serif" font-weight="300" font-size="30" fill="#858384" letter-spacing="1.5">conseils</text>
+            </svg>
+          </span>
+          <span class="logo-txt"><b>SG Conseils</b><small>Expertise comptable</small></span>
+        </a>
+        <p>Cabinet d'expertise comptable indépendant, inscrit à l'Ordre des experts-comptables. SARL au capital de 50 000 €, RCS Toulouse 808 913 750.</p>
+      </div>
+      <div>
+        <h4>Métiers</h4>
+        <ul><li><a href="#metiers">Comptabilité</a></li><li><a href="#metiers">Audit</a></li><li><a href="#metiers">Juridique</a></li><li><a href="#metiers">Conseil</a></li><li><a href="#metiers">Gestion</a></li><li><a href="#metiers">Social / RH</a></li><li><a href="#metiers">Informatique</a></li></ul>
+      </div>
+      <div>
+        <h4>Le cabinet</h4>
+        <ul><li><a href="#cabinet">Qui sommes-nous</a></li><li><a href="#parcours">Accompagnement</a></li><li><a href="#pourquoi">Pourquoi nous</a></li><li><a href="#expertise">Expertise</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Nous trouver</h4>
+        <ul>
+          <li>6 chemin de Limayrac<br>31500 Toulouse</li>
+          <li>79 rue de la République<br>31290 Villefranche-de-Lauragais</li>
+          <li><a href="tel:+33973611722">09 73 61 17 22</a></li>
+          <li><a href="mailto:contact@sgconseils.com">contact@sgconseils.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© <span id="year">2026</span> SG Conseils · Sauvagnac Gineste Conseils. Tous droits réservés.</span>
+      <span><a href="#">Mentions légales</a> · <a href="#">Politique de confidentialité</a> · Conception <a href="#">PMC Marketing</a></span>
+    </div>
+  </div>
+</footer>
+
+<a href="#hero" class="to-top" id="to-top" aria-label="Revenir en haut"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(pointer: fine)').matches;
+  var hasGsap = typeof gsap !== 'undefined';
+  var body = document.body;
+  if (reduce || !hasGsap) body.classList.add('no-motion');
+  if (hasGsap && typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- Défilement fluide ---------- */
+  var lenis = null;
+  if (!reduce && hasGsap && typeof Lenis !== 'undefined') {
+    lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 0.95, smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+  function scrollToTarget(hash){
+    var el = document.querySelector(hash); if (!el) return;
+    if (lenis) lenis.scrollTo(el, { offset: hash === '#hero' ? 0 : -10, duration: 1.4, easing: function(t){ return 1 - Math.pow(1 - t, 4); } });
+    else el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var h = a.getAttribute('href'); if (!h || h === '#') { e.preventDefault(); return; }
+      e.preventDefault(); closeMenu(); scrollToTarget(h);
+      try { history.replaceState(null, '', h); } catch (err) {}
+    });
+  });
+
+  /* ---------- Navigation ---------- */
+  var nav = document.getElementById('nav'), lastY = 0, toTop = document.getElementById('to-top');
+  function onScroll(){
+    var y = window.scrollY || 0;
+    nav.classList.toggle('scrolled', y > 40);
+    if (y > lastY && y > 300 && !body.classList.contains('menu-open')) nav.classList.add('hidden'); else nav.classList.remove('hidden');
+    toTop.classList.toggle('show', y > window.innerHeight * 1.2);
+    lastY = y;
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  var burger = document.getElementById('burger'), menu = document.getElementById('menu');
+  function closeMenu(){ body.classList.remove('menu-open'); burger.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); if (lenis) lenis.start(); }
+  burger.addEventListener('click', function(){
+    var open = !body.classList.contains('menu-open');
+    body.classList.toggle('menu-open', open); burger.setAttribute('aria-expanded', String(open)); menu.setAttribute('aria-hidden', String(!open));
+    if (lenis) { open ? lenis.stop() : lenis.start(); }
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
+
+  /* ---------- Curseur ---------- */
+  var cursor = document.getElementById('cursor');
+  if (fine && !reduce && hasGsap) {
+    body.classList.add('has-cursor');
+    var cx = window.innerWidth/2, cy = window.innerHeight/2, tx = cx, ty = cy, label = cursor.querySelector('.c-ring span');
+    window.addEventListener('pointermove', function(e){ tx = e.clientX; ty = e.clientY; }, { passive: true });
+    gsap.ticker.add(function(){ cx += (tx - cx) * 0.18; cy += (ty - cy) * 0.18; cursor.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)'; });
+    document.addEventListener('pointerover', function(e){
+      var t = e.target.closest('[data-cursor]'), l = e.target.closest('a,button,label,select,input,textarea');
+      if (t) { label.textContent = t.getAttribute('data-cursor') || 'Voir'; cursor.classList.add('is-label'); cursor.classList.remove('is-link'); }
+      else if (l) { cursor.classList.add('is-link'); cursor.classList.remove('is-label'); }
+      else cursor.classList.remove('is-link','is-label');
+    });
+  }
+
+  /* ---------- Utilitaires ---------- */
+  function splitWords(root){
+    var out = [];
+    function walk(node){
+      Array.prototype.slice.call(node.childNodes).forEach(function(child){
+        if (child.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          child.textContent.split(/(\s+)/).forEach(function(part){
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+            var w = document.createElement('span'); w.className = 'w';
+            var wi = document.createElement('span'); wi.className = 'wi'; wi.textContent = part;
+            w.appendChild(wi); frag.appendChild(w); out.push(wi);
+          });
+          node.replaceChild(frag, child);
+        } else if (child.nodeType === 1 && child.tagName !== 'BR') walk(child);
+      });
+    }
+    walk(root); return out;
+  }
+  function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
+
+  /* ---------- Scène 3D du héro ---------- */
+  var heroReady = function(){ document.getElementById('hero').classList.add('is-ready'); };
+  (function hero3D(){
+    if (typeof THREE === 'undefined') { heroReady(); return; }
+    var canvas = document.getElementById('hero-canvas');
+    var renderer;
+    try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, powerPreference: 'high-performance' }); }
+    catch (e) { heroReady(); return; }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.6));
+    renderer.setClearColor(0x000000, 0);
+    var scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x1C212F, 0.011);
+    var camera = new THREE.PerspectiveCamera(34, 1, 0.1, 200);
+    var mobile = window.innerWidth < 760;
+    /* Un graphique de pilotage en relief : axe X = le temps (2015 -> prévisionnel),
+       axe Z = les indicateurs suivis (CA, marge, trésorerie, résultat...).
+       Barres pleines = le réalisé ; barres rouges translucides = le prévisionnel. */
+    var COLS = mobile ? 40 : 56, ROWS = mobile ? 20 : 30, GX = 0.56, GZ = 0.72, TODAY = 0.68, HMUL = mobile ? 1.1 : 2.1;
+    var splitCol = Math.round(COLS * TODAY);
+    var geo = new THREE.BoxGeometry(0.4, 1, 0.46); geo.translate(0, 0.5, 0);
+    var matPast = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.5, metalness: 0.2 });
+    var matFuture = new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0xB12434, emissiveIntensity: 0.45, roughness: 0.35, metalness: 0.1, transparent: true, opacity: 0.3, depthWrite: false });
+    var past = new THREE.InstancedMesh(geo, matPast, splitCol * ROWS); past.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    var future = new THREE.InstancedMesh(geo, matFuture, (COLS - splitCol) * ROWS); future.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    past.frustumCulled = false; future.frustumCulled = false;
+    var group = new THREE.Group(); group.add(past); group.add(future); scene.add(group);
+    group.scale.setScalar(mobile ? 0.42 : 0.4);
+    var gridHelper = new THREE.GridHelper(COLS * GX * 2, 48, 0x425B8A, 0x2C3447);
+    gridHelper.material.transparent = true; gridHelper.material.opacity = 0.2; gridHelper.position.y = -0.03; group.add(gridHelper);
+    var midRow = Math.floor(ROWS * 0.5);
+    var pastPts = new Float32Array((splitCol + 1) * 3), futPts = new Float32Array((COLS - splitCol) * 3);
+    var pastGeo = new THREE.BufferGeometry(); pastGeo.setAttribute('position', new THREE.BufferAttribute(pastPts, 3));
+    var futGeo = new THREE.BufferGeometry(); futGeo.setAttribute('position', new THREE.BufferAttribute(futPts, 3));
+    var pastLine = new THREE.Line(pastGeo, new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.9 }));
+    var futLine = new THREE.Line(futGeo, new THREE.LineDashedMaterial({ color: 0xFF5566, dashSize: 0.5, gapSize: 0.32, transparent: true, opacity: 0.95 }));
+    group.add(pastLine); group.add(futLine);
+    var todayX = (splitCol - 0.5 - COLS / 2) * GX, depth = ROWS * GZ;
+    var plane = new THREE.Mesh(new THREE.PlaneGeometry(depth + 3, 16), new THREE.MeshBasicMaterial({ color: 0xD42B3F, transparent: true, opacity: 0.07, side: THREE.DoubleSide, depthWrite: false }));
+    plane.rotation.y = Math.PI / 2; plane.position.set(todayX, 8, 0); group.add(plane);
+    group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(todayX, 0.02, -depth / 2 - 1.5), new THREE.Vector3(todayX, 0.02, depth / 2 + 1.5)]), new THREE.LineBasicMaterial({ color: 0xD42B3F, transparent: true, opacity: 0.75 })));
+    scene.add(new THREE.HemisphereLight(0xBEC8DA, 0x0B0E14, 0.9));
+    var sun = new THREE.DirectionalLight(0xffffff, 1.4); sun.position.set(14, 24, 10); scene.add(sun);
+    var rim = new THREE.DirectionalLight(0x7D93B5, 0.6); rim.position.set(-20, 10, -10); scene.add(rim);
+    var red = new THREE.PointLight(0xD42B3F, 3.2, 46, 1.6); red.position.set(6, 9, 6); scene.add(red);
+    var dummy = new THREE.Object3D();
+    var cLow = new THREE.Color(0x232A3A), cMid = new THREE.Color(0x425B8A), cHigh = new THREE.Color(0xBEC8DA), cRed = new THREE.Color(0xD42B3F), cRedHi = new THREE.Color(0xFFC1C8), cWhite = new THREE.Color(0xFFFFFF), tmp = new THREE.Color();
+    function hash(x,y){ var n = Math.sin(x * 127.1 + y * 311.7) * 43758.5453; return n - Math.floor(n); }
+    function vnoise(x,y){
+      var xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi;
+      var u = xf*xf*(3-2*xf), v = yf*yf*(3-2*yf);
+      var a = hash(xi,yi), b = hash(xi+1,yi), c = hash(xi,yi+1), d = hash(xi+1,yi+1);
+      return a + (b-a)*u + (c-a)*v + (a-b-c+d)*u*v;
+    }
+    function fbm(x,y){ return 0.55*vnoise(x,y) + 0.3*vnoise(x*2.1+5.2, y*2.1+1.3) + 0.15*vnoise(x*4.3+9.1, y*4.3+7.7); }
+    function heightAt(c, r, t){
+      var u = c / (COLS - 1);
+      var trend = 0.3 + 0.7 * (Math.exp(2.6 * u) - 1);
+      var season = 1 + 0.14 * Math.sin(u * Math.PI * 22 - t * 0.6);
+      var series = 0.62 + 0.38 * vnoise(r * 0.37 + 3.1, 7.7);
+      var amp = 0.3 + 0.7 * Math.min(1, trend / 5);
+      var life = 0.5 * amp * fbm(c * 0.22 + t * 0.9, r * 0.22 - t * 0.4);
+      var wave = 0.12 * amp * Math.sin(u * 16 - t * 2.4 + r * 0.25);
+      return 0.2 + (trend * season * series + life + wave) * HMUL;
+    }
+    /* Survol : la ligne d'indicateur sous le curseur se soulève */
+    var hoverT = { c: COLS * 0.5, r: ROWS * 0.5, k: 0 }, hoverS = { c: COLS * 0.5, r: ROWS * 0.5, k: 0 };
+    function liftAt(c, r){
+      if (hoverS.k < 0.002) return 0;
+      var dr = r - hoverS.r, dc = c - hoverS.c;
+      return hoverS.k * 3.6 * HMUL / 1.7 * Math.exp(-dr * dr / 2.42) * (0.3 + 0.7 * Math.exp(-dc * dc / 98));
+    }
+    var raycaster = new THREE.Raycaster(), ndc = new THREE.Vector2(), hitPlane = new THREE.Plane(), hitPoint = new THREE.Vector3(), nrm = new THREE.Vector3(), pOnPlane = new THREE.Vector3();
+    var BANDS = ['Chiffre d\'affaires', 'Marge brute', 'Charges d\'exploitation', 'Masse salariale', 'Trésorerie', 'Résultat net', 'Investissements'];
+    var tip = document.getElementById('h3d-tip'), tipName = tip.querySelector('b'), tipYear = tip.querySelector('span'), tipKey = '';
+    var heroEl = document.getElementById('hero'), pointerIn = false, px = 0, py = 0;
+    heroEl.addEventListener('pointermove', function(e){ pointerIn = true; px = e.clientX; py = e.clientY; }, { passive: true });
+    heroEl.addEventListener('pointerleave', function(){ pointerIn = false; });
+    var labels = Array.prototype.slice.call(document.querySelectorAll('#hero .h3d-label')).map(function(el){
+      return { el: el, v: new THREE.Vector3(), u: parseFloat(el.getAttribute('data-u')), row: parseFloat(el.getAttribute('data-row') || '-1'), chip: el.classList.contains('h3d-chip') };
+    });
+    var mx = 0, my = 0, smx = 0, smy = 0, scrollP = 0, visible = true, t0 = performance.now();
+    window.addEventListener('pointermove', function(e){ mx = (e.clientX / window.innerWidth - 0.5) * 2; my = (e.clientY / window.innerHeight - 0.5) * 2; }, { passive: true });
+    var W = 1, H = 1;
+    function resize(){
+      W = canvas.clientWidth || window.innerWidth; H = canvas.clientHeight || window.innerHeight;
+      renderer.setSize(W, H, false); camera.aspect = W / H; camera.updateProjectionMatrix();
+    }
+    window.addEventListener('resize', resize); resize();
+    if ('IntersectionObserver' in window) new IntersectionObserver(function(en){ visible = en[0].isIntersecting; }, { threshold: 0 }).observe(canvas);
+    var frame = 0, peakT = 6.2, rect = null;
+    function render(now){
+      requestAnimationFrame(render);
+      if (!visible) return;
+      frame++;
+      var t = (now - t0) * 0.00022;
+      if (reduce) t = 0.5;
+      smx += (mx - smx) * 0.04; smy += (my - smy) * 0.04;
+      scrollP = clamp((window.scrollY || 0) / Math.max(1, window.innerHeight), 0, 1);
+      group.rotation.y = -0.38 + smx * 0.08 + scrollP * 0.3;
+      group.rotation.x = smy * 0.03;
+      group.position.set(mobile ? 0.6 : 5.6, (mobile ? -4.6 : -2.7) - scrollP * 3.5, 0);
+      camera.position.set(0, (mobile ? 9.5 : 9) + scrollP * 3 - smy * 0.5, 32);
+      camera.lookAt(0, 0.3 - scrollP * 1.5, 0);
+      camera.updateMatrixWorld(); group.updateMatrixWorld();
+      /* Survol : quelle ligne, quelle année ? */
+      hoverT.k = 0;
+      if (fine && pointerIn && !reduce) {
+        if (frame % 10 === 1 || !rect) rect = canvas.getBoundingClientRect();
+        ndc.set(((px - rect.left) / rect.width) * 2 - 1, -((py - rect.top) / rect.height) * 2 + 1);
+        raycaster.setFromCamera(ndc, camera);
+        nrm.set(0, 1, 0).transformDirection(group.matrixWorld);
+        pOnPlane.set(0, 2.2, 0).applyMatrix4(group.matrixWorld);
+        hitPlane.setFromNormalAndCoplanarPoint(nrm, pOnPlane);
+        if (raycaster.ray.intersectPlane(hitPlane, hitPoint)) {
+          group.worldToLocal(hitPoint);
+          var hc = hitPoint.x / GX + COLS / 2, hr = hitPoint.z / GZ + ROWS / 2;
+          if (hc >= -1.5 && hc <= COLS + 0.5 && hr >= -1.5 && hr <= ROWS + 0.5) { hoverT.c = clamp(hc, 0, COLS - 1); hoverT.r = clamp(hr, 0, ROWS - 1); hoverT.k = 1; }
+        }
+      }
+      hoverS.k += (hoverT.k - hoverS.k) * (hoverT.k ? 0.1 : 0.06);
+      if (hoverT.k) { hoverS.c += (hoverT.c - hoverS.c) * 0.16; hoverS.r += (hoverT.r - hoverS.r) * 0.16; }
+      var ip = 0, ifu = 0, c, r, h, k, lf, doColor = (frame % 2 === 0 || frame === 1 || hoverS.k > 0.002);
+      for (r = 0; r < ROWS; r++) {
+        for (c = 0; c < COLS; c++) {
+          lf = liftAt(c, r);
+          h = heightAt(c, r, t) + lf;
+          dummy.position.set((c - COLS / 2) * GX, 0, (r - ROWS / 2) * GZ);
+          dummy.scale.set(1, h, 1); dummy.updateMatrix();
+          if (c < splitCol) {
+            past.setMatrixAt(ip, dummy.matrix);
+            if (doColor) {
+              k = clamp((h - lf) / peakT, 0, 1);
+              if (k < 0.5) tmp.copy(cLow).lerp(cMid, k * 2); else tmp.copy(cMid).lerp(cHigh, (k - 0.5) * 2);
+              if (lf > 0.03) tmp.lerp(cWhite, clamp(lf / (3.6 * HMUL / 1.7), 0, 1) * 0.85);
+              past.setColorAt(ip, tmp);
+            }
+            ip++;
+          } else {
+            future.setMatrixAt(ifu, dummy.matrix);
+            if (doColor) { tmp.copy(cRed); if (lf > 0.03) tmp.lerp(cRedHi, clamp(lf / (3.6 * HMUL / 1.7), 0, 1)); future.setColorAt(ifu, tmp); }
+            ifu++;
+          }
+        }
+      }
+      past.instanceMatrix.needsUpdate = true; future.instanceMatrix.needsUpdate = true;
+      if (past.instanceColor) past.instanceColor.needsUpdate = true;
+      if (future.instanceColor) future.instanceColor.needsUpdate = true;
+      var zMid = (midRow - ROWS / 2) * GZ;
+      for (c = 0; c <= splitCol; c++) { pastPts[c*3] = (c - COLS / 2) * GX; pastPts[c*3+1] = heightAt(c, midRow, t) + liftAt(c, midRow) + 0.18; pastPts[c*3+2] = zMid; }
+      for (c = splitCol; c < COLS; c++) { var j = c - splitCol; futPts[j*3] = (c - COLS / 2) * GX; futPts[j*3+1] = heightAt(c, midRow, t) + liftAt(c, midRow) + 0.18; futPts[j*3+2] = zMid; }
+      pastGeo.attributes.position.needsUpdate = true; futGeo.attributes.position.needsUpdate = true; futLine.computeLineDistances();
+      red.position.set(Math.sin(now * 0.0004) * 12 + 6, 8 + Math.sin(now * 0.0007) * 2, Math.cos(now * 0.0004) * 10);
+      renderer.render(scene, camera);
+      for (var L = 0; L < labels.length; L++) {
+        var lb = labels[L], col = lb.u * (COLS - 1);
+        if (lb.chip) { var rr = Math.round(lb.row * (ROWS - 1)), cc = Math.round(col); lb.v.set((col - COLS / 2) * GX, heightAt(cc, rr, t) + liftAt(cc, rr) + 0.3, (rr - ROWS / 2) * GZ); }
+        else lb.v.set((col - COLS / 2) * GX, 0, depth / 2 + 1.2);
+        lb.v.applyMatrix4(group.matrixWorld).project(camera);
+        var off = lb.v.z > 1 || lb.v.x < -1.1 || lb.v.x > 1.1;
+        lb.el.style.opacity = off ? '0' : '';
+        lb.el.style.transform = 'translate3d(' + ((lb.v.x * 0.5 + 0.5) * W) + 'px,' + ((-lb.v.y * 0.5 + 0.5) * H) + 'px,0)';
+      }
+      /* Info-bulle */
+      if (hoverT.k && rect) {
+        var band = BANDS[clamp(Math.floor(hoverT.r / ROWS * BANDS.length), 0, BANDS.length - 1)];
+        var u = hoverT.c / (COLS - 1), yearTxt = u <= TODAY ? String(2015 + Math.floor(u / TODAY * 11.99)) : 'Prévisionnel ' + (2027 + Math.floor((u - TODAY) / (1 - TODAY) * 1.99));
+        var key = band + '|' + yearTxt;
+        if (key !== tipKey) { tipKey = key; tipName.textContent = band; tipYear.textContent = yearTxt; tip.classList.toggle('is-future', u > TODAY); }
+        tip.style.transform = 'translate3d(' + (px - rect.left + 18) + 'px,' + (py - rect.top - 44) + 'px,0)';
+      }
+      tip.style.opacity = hoverS.k > 0.05 ? '1' : '0';
+    }
+    requestAnimationFrame(render);
+    heroReady();
+  })();
+
+  if (!hasGsap) return;
+
+  /* ---------- Mouvement souris sur le héro ---------- */
+  if (fine && !reduce) {
+    var mouseLayers = document.querySelectorAll('[data-mouse]');
+    window.addEventListener('pointermove', function(e){
+      var px = e.clientX / window.innerWidth - 0.5, py = e.clientY / window.innerHeight - 0.5;
+      mouseLayers.forEach(function(el){ var s = parseFloat(el.getAttribute('data-mouse')) || 8; gsap.to(el, { x: -px * s, y: -py * s, duration: 1.2, ease: 'power2.out', overwrite: 'auto' }); });
+    }, { passive: true });
+  }
+
+  /* ---------- Inclinaison 3D & aimantation ---------- */
+  if (fine && !reduce) {
+    document.querySelectorAll('.tilt, .tile').forEach(function(el){
+      var strength = parseFloat(el.getAttribute('data-tilt')) || 5;
+      el.addEventListener('pointermove', function(e){
+        var r = el.getBoundingClientRect(), px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5;
+        el.style.setProperty('--gx', (px * 100 + 50) + '%'); el.style.setProperty('--gy', (py * 100 + 50) + '%');
+        gsap.to(el, { rotateY: px * strength, rotateX: -py * strength, transformPerspective: 1000, duration: 0.6, ease: 'power2.out', overwrite: 'auto' });
+      });
+      el.addEventListener('pointerleave', function(){ gsap.to(el, { rotateY: 0, rotateX: 0, duration: 1, ease: 'elastic.out(1,0.55)', overwrite: 'auto' }); });
+    });
+    document.querySelectorAll('.magnetic').forEach(function(el){
+      el.addEventListener('pointermove', function(e){
+        var r = el.getBoundingClientRect(); gsap.to(el, { x: (e.clientX - r.left - r.width/2) * 0.28, y: (e.clientY - r.top - r.height/2) * 0.36, duration: 0.5, ease: 'power2.out', overwrite: 'auto' });
+      });
+      el.addEventListener('pointerleave', function(){ gsap.to(el, { x: 0, y: 0, duration: 0.9, ease: 'elastic.out(1,0.4)', overwrite: 'auto' }); });
+    });
+  }
+
+  /* ---------- Copier & formulaire ---------- */
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault(); e.stopPropagation();
+      var v = b.getAttribute('data-copy'), old = b.textContent;
+      function done(){ b.textContent = 'Copié'; setTimeout(function(){ b.textContent = old; }, 1600); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(done, done); else done();
+    });
+  });
+  var form = document.getElementById('form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var ok = true;
+    form.querySelectorAll('[required]').forEach(function(f){ var bad = !f.value.trim() || (f.type === 'email' && !/^\S+@\S+\.\S+$/.test(f.value)); f.style.borderBottomColor = bad ? '#D42B3F' : ''; if (bad) ok = false; });
+    if (!ok) return;
+    form.classList.add('sent');
+  });
+
+  if (reduce) return;
+
+  /* ---------- Préchargeur + intro ---------- */
+  var intro = gsap.timeline({ paused: true });
+  var titleWords = splitWords(document.getElementById('hero-title'));
+  gsap.set(titleWords, { yPercent: 115 });
+  gsap.set('.hero-eyebrow, .hero-side > *, .hero-bottom .fact, .scroll-cue', { opacity: 0, y: 24 });
+  intro
+    .to(titleWords, { yPercent: 0, duration: 1.3, ease: 'power4.out', stagger: 0.06 }, 0)
+    .to('.hero-eyebrow', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, 0.25)
+    .to('.hero-side > *', { opacity: 1, y: 0, duration: 1, ease: 'power3.out', stagger: 0.12 }, 0.55)
+    .to('.hero-bottom .fact', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', stagger: 0.08 }, 0.9)
+    .to('.scroll-cue', { opacity: 1, y: 0, duration: 0.8 }, 1.3);
+
+  var loader = document.getElementById('loader'), num = document.getElementById('ld-num'), fill = document.getElementById('ld-fill');
+  if (lenis) lenis.stop();
+  var cnt = { v: 0 };
+  gsap.timeline()
+    .to(cnt, { v: 100, duration: 1.5, ease: 'power2.inOut', onUpdate: function(){ num.textContent = Math.round(cnt.v); } })
+    .to(fill, { scaleX: 1, duration: 1.5, ease: 'power2.inOut' }, 0)
+    .to('#loader > *', { opacity: 0, y: -20, duration: 0.4, stagger: 0.05, ease: 'power2.in' }, 1.45)
+    .to(loader, { yPercent: -100, duration: 1, ease: 'power4.inOut', onStart: function(){ intro.play(); } }, 1.7)
+    .set(loader, { display: 'none', onComplete: function(){ if (lenis) lenis.start(); ScrollTrigger.refresh(); } });
+
+  /* ---------- Barre de progression ---------- */
+  gsap.to('#progress', { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.4 } });
+
+  /* ---------- Parallaxe ---------- */
+  document.querySelectorAll('[data-parallax]').forEach(function(el){
+    var s = parseFloat(el.getAttribute('data-parallax')) || 0.2, sec = el.closest('section') || el.parentElement;
+    gsap.fromTo(el, { yPercent: -s * 60 }, { yPercent: s * 60, ease: 'none', scrollTrigger: { trigger: sec, start: 'top bottom', end: 'bottom top', scrub: true } });
+  });
+
+  /* ---------- Révélations de texte ---------- */
+  document.querySelectorAll('[data-split]').forEach(function(h){
+    var words = splitWords(h);
+    gsap.from(words, { yPercent: 110, duration: 1.1, ease: 'power4.out', stagger: 0.035, scrollTrigger: { trigger: h, start: 'top 86%', once: true } });
+  });
+  document.querySelectorAll('[data-reveal]').forEach(function(el, i){
+    gsap.from(el, { y: 36, opacity: 0, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true } });
+  });
+  var manifesto = document.getElementById('manifesto');
+  var mWords = splitWords(manifesto);
+  gsap.to(mWords, { opacity: 1, stagger: 0.08, ease: 'none', scrollTrigger: { trigger: manifesto, start: 'top 78%', end: 'bottom 45%', scrub: 0.6 } });
+
+  /* ---------- Compteurs ---------- */
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var end = parseFloat(el.getAttribute('data-count')), start = parseFloat(el.getAttribute('data-start') || '0'), o = { v: start };
+    el.textContent = start;
+    ScrollTrigger.create({ trigger: el, start: 'top 88%', once: true, onEnter: function(){
+      gsap.to(o, { v: end, duration: 2, ease: 'power3.out', onUpdate: function(){ el.textContent = Math.round(o.v); } });
+    }});
+  });
+
+  /* ---------- Métiers : défilement horizontal ---------- */
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 901px)', function(){
+    var track = document.getElementById('m-track'), cur = document.getElementById('m-cur'), bar = document.getElementById('m-bar'), cards = track.querySelectorAll('.mcard');
+    var getDist = function(){ return track.scrollWidth - window.innerWidth; };
+    var tween = gsap.to(track, { x: function(){ return -getDist(); }, ease: 'none',
+      scrollTrigger: { trigger: '#metiers', pin: '#metiers-pin', scrub: 1, start: 'top top', end: function(){ return '+=' + (getDist() + window.innerHeight * 0.4); }, invalidateOnRefresh: true, anticipatePin: 1,
+        onUpdate: function(st){ var p = st.progress; bar.style.transform = 'scaleX(' + p + ')'; var idx = Math.min(cards.length, Math.floor(p * cards.length) + 1); cur.textContent = (idx < 10 ? '0' : '') + idx; } }
+    });
+    cards.forEach(function(card){ gsap.from(card, { y: 60, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: card, containerAnimation: tween, start: 'left 95%', once: true } }); });
+    return function(){ tween.scrollTrigger && tween.scrollTrigger.kill(); tween.kill(); };
+  });
+  mm.add('(max-width: 900px)', function(){
+    document.querySelectorAll('#m-track .mcard').forEach(function(card){ gsap.from(card, { y: 50, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: card, start: 'top 90%', once: true } }); });
+  });
+
+  /* ---------- Accompagnement : empilement ---------- */
+  mm.add('(min-width: 901px)', function(){
+    var cards = gsap.utils.toArray('#stack .jcard');
+    cards.forEach(function(card, i){
+      if (i === cards.length - 1) return;
+      var next = cards[i + 1];
+      gsap.fromTo(card, { scale: 1, filter: 'brightness(1)' }, { scale: 0.94, filter: 'brightness(0.9)', transformOrigin: 'top center', ease: 'none',
+        scrollTrigger: { trigger: next, start: 'top bottom', end: 'top top+=' + (96 + i * 16), scrub: true } });
+    });
+    cards.forEach(function(card){ gsap.from(card, { y: 80, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: card, start: 'top 92%', once: true } }); });
+  });
+
+  /* ---------- Tuiles bento ---------- */
+  gsap.from('.bento .tile', { y: 50, opacity: 0, duration: 1, stagger: 0.08, ease: 'power3.out', scrollTrigger: { trigger: '.bento', start: 'top 82%', once: true } });
+
+  /* ---------- Méthode : ligne de progression ---------- */
+  var steps = document.querySelectorAll('#method .step');
+  gsap.to('#m-fill', { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#method', start: 'top 70%', end: 'bottom 55%', scrub: true,
+    onUpdate: function(st){ steps.forEach(function(s, i){ s.classList.toggle('is-on', st.progress >= (i / steps.length) + 0.02); }); } } });
+  gsap.from(steps, { x: 30, opacity: 0, duration: 1, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: '#method', start: 'top 80%', once: true } });
+  gsap.from('.person', { y: 40, opacity: 0, duration: 1, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: '.people', start: 'top 85%', once: true } });
+
+  /* ---------- Carte ---------- */
+  var route = document.getElementById('route-draw');
+  if (route && route.getTotalLength) {
+    var L = route.getTotalLength(); route.style.strokeDasharray = L; route.style.strokeDashoffset = L;
+    gsap.to(route, { strokeDashoffset: 0, duration: 2, ease: 'power2.inOut', scrollTrigger: { trigger: '#map', start: 'top 75%', once: true } });
+  }
+  gsap.from('#map', { scale: 0.94, opacity: 0, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: '#map', start: 'top 85%', once: true } });
+  gsap.from('.addr', { x: -30, opacity: 0, duration: 0.9, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: '.addr-list', start: 'top 88%', once: true } });
+
+  /* ---------- Contact ---------- */
+  gsap.from('.form', { y: 60, opacity: 0, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: '#contact', start: 'top 70%', once: true } });
+  gsap.from('.ct-direct > *', { y: 20, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out', scrollTrigger: { trigger: '.ct-direct', start: 'top 88%', once: true } });
+
+  /* ---------- Rafraîchissements ---------- */
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ ScrollTrigger.refresh(); });
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+})();
+</script>
+</body>
+</html>
